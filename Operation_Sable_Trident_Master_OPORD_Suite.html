@@ -1,0 +1,1297 @@
+<!DOCTYPE html>
+<html lang="en"><head><script data-bard-injected="true">(function(firebaseConfig, initialAuthToken, appId) {
+        window.__firebase_config = firebaseConfig;
+        window.__initial_auth_token = initialAuthToken;
+        window.__app_id = appId;
+            })("\n{\n  \"apiKey\": \"AIzaSyCqyCcs2R2e7AegGjvFAwG98wlamtbHvZY\",\n  \"authDomain\": \"bard-frontend.firebaseapp.com\",\n  \"projectId\": \"bard-frontend\",\n  \"storageBucket\": \"bard-frontend.firebasestorage.app\",\n  \"messagingSenderId\": \"175205271074\",\n  \"appId\": \"1:175205271074:web:2b7bd4d34d33bf38e6ec7b\"\n}\n","eyJhbGciOiJSUzI1NiIsImtpZCI6ImMyZGJhZTg4ODgzOTA1ZDViODRmNWNiY2IxNzZhZjM5ZTQ0YWY3NTIiLCJ0eXAiOiJKV1QifQ.eyJzdWIiOiJmaXJlYmFzZS1hZG1pbnNkay1mYnN2Y0BiYXJkLWZyb250ZW5kLmlhbS5nc2VydmljZWFjY291bnQuY29tIiwiYXVkIjoiaHR0cHM6Ly9pZGVudGl0eXRvb2xraXQuZ29vZ2xlYXBpcy5jb20vZ29vZ2xlLmlkZW50aXR5LmlkZW50aXR5dG9vbGtpdC52MS5JZGVudGl0eVRvb2xraXQiLCJ1aWQiOiIxNjMwNDcyMDE5OTM4MjI1ODUwNCIsImlzcyI6ImZpcmViYXNlLWFkbWluc2RrLWZic3ZjQGJhcmQtZnJvbnRlbmQuaWFtLmdzZXJ2aWNlYWNjb3VudC5jb20iLCJjbGFpbXMiOnsiYXBwSWQiOiJjXzRmOTdlYTc5NGMwZTMxM2Ffb3BlcmF0aW9uX3NhYmxlX3RyaWRlbnRfbWFzdGVyX29wb3Jkcy5odG1sLTY5In0sImV4cCI6MTc4NTcwMDQ5NCwiaWF0IjoxNzg1Njk2ODk0LCJhbGciOiJSUzI1NiJ9.HXHwY9UagGOJOjw5gnOpGBFTZU9yB4wECOrAimR87Baubd6uyCNY4zbhOowjl8yMUy50d8wFpvs4kXSjFfyWILiaGfNwhva9aUmXWtGo9HOxsd_CB20QPR28ZVFNoqGomGg-MK_YWlSZYIk1k_ITl8qADakV63ggGZY5nLGp89U0fJ4WJQ6nO8BypbvnZEHNpyUw80PwfpTP3m2SsSi7R4e_flmrn6azCi2PcO3T6ZFUwuXmXRUqTHwUIbWcB2YdP0rryKnpm0k-Iis8DFMftsFqjCb-VFjeeHex4Nf0W1mrhXnAJYo1yfwBarOw3I3LoiQWcgHXbWjQZ3IsUtt4UQ","c_4f97ea794c0e313a_operation_sable_trident_master_opords.html-69")</script><script data-bard-injected="true">(function(){'use strict';window.addEventListener("message",a=>{a.data&&a.data.type==="SUPPLEMENTAL_DATA_UPDATE"&&window.dispatchEvent(new CustomEvent("supplementaldataupdate",{detail:a.data.data}))});}).call(this);
+</script><script data-bard-injected="true">(function(){'use strict';var h=typeof Object.defineProperties=="function"?Object.defineProperty:function(a,b,d){if(a==Array.prototype||a==Object.prototype)return a;a[b]=d.value;return a};function l(a){a=["object"==typeof globalThis&&globalThis,a,"object"==typeof window&&window,"object"==typeof self&&self,"object"==typeof global&&global];for(var b=0;b<a.length;++b){var d=a[b];if(d&&d.Math==Math)return d}throw Error("Cannot find global object");}var n=l(this);
+function p(a,b){if(b)a:{var d=n;a=a.split(".");for(var c=0;c<a.length-1;c++){var e=a[c];if(!(e in d))break a;d=d[e]}a=a[a.length-1];c=d[a];b=b(c);b!=c&&b!=null&&h(d,a,{configurable:!0,writable:!0,value:b})}}function r(a){function b(c){return a.next(c)}function d(c){return a.throw(c)}return new Promise(function(c,e){function f(g){g.done?c(g.value):Promise.resolve(g.value).then(b,d).then(f,e)}f(a.next())})}function t(a){return r(a())}
+p("Object.values",function(a){return a?a:function(b){var d=[],c;for(c in b)Object.prototype.hasOwnProperty.call(b,c)&&d.push(b[c]);return d}});p("Array.prototype.includes",function(a){return a?a:function(b,d){var c=this;c instanceof String&&(c=String(c));var e=c.length;d=d||0;for(d<0&&(d=Math.max(d+e,0));d<e;d++){var f=c[d];if(f===b||Object.is(f,b))return!0}return!1}});/*
+
+ MIT License
+
+ Copyright (c) 2017-2023 W.Y.
+
+ Permission is hereby granted, free of charge, to any person obtaining a copy
+ of this software and associated documentation files (the "Software"), to deal
+ in the Software without restriction, including without limitation the rights
+ to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+ copies of the Software, and to permit persons to whom the Software is
+ furnished to do so, subject to the following conditions:
+
+ The above copyright notice and this permission notice shall be included in
+ all copies or substantial portions of the Software.
+
+ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+ SOFTWARE.
+
+*/
+function u(a,b){var d=a.style;b.backgroundColor&&(d.backgroundColor=b.backgroundColor);b.width&&(d.width=`${b.width}px`);b.height&&(d.height=`${b.height}px`);var c=b.style;c!=null&&Object.keys(c).forEach(e=>{d[e]=c[e]})};var v=(()=>{var a=0;return()=>{a+=1;return`u${`0000${(Math.random()*1679616<<0).toString(36)}`.slice(-4)}${a}`}})();function w(a){var b=[];for(let d=0,c=a.length;d<c;d++)b.push(a[d]);return b}let x=null;function y(a={}){return x?x:a.l?x=a.l:x=w(window.getComputedStyle(document.documentElement))}function z(a,b){return(a=(a.ownerDocument.defaultView||window).getComputedStyle(a).getPropertyValue(b))?parseFloat(a.replace("px","")):0}
+function A(a,b={}){var d;if(!(d=b.width)){d=z(a,"border-left-width");var c=z(a,"border-right-width");d=a.clientWidth+d+c}(b=b.height)||(b=z(a,"border-top-width"),c=z(a,"border-bottom-width"),b=a.clientHeight+b+c);return{width:d,height:b}}function B(a){return new Promise((b,d)=>{var c=new Image;c.onload=()=>{c.decode().then(()=>{requestAnimationFrame(()=>b(c))})};c.onerror=d;c.crossOrigin="anonymous";c.decoding="async";c.src=a})}
+function C(a){return t(function*(){return Promise.resolve().then(()=>(new XMLSerializer).serializeToString(a)).then(encodeURIComponent).then(b=>`data:image/svg+xml;charset=utf-8,${b}`)})}
+function D(a,b,d){return t(function*(){var c=document.createElementNS("http://www.w3.org/2000/svg","svg"),e=document.createElementNS("http://www.w3.org/2000/svg","foreignObject");c.setAttribute("width",`${b}`);c.setAttribute("height",`${d}`);c.setAttribute("viewBox",`0 0 ${b} ${d}`);e.setAttribute("width","100%");e.setAttribute("height","100%");e.setAttribute("x","0");e.setAttribute("y","0");e.setAttribute("externalResourcesRequired","true");c.appendChild(e);e.appendChild(a);return C(c)})}
+var E=(a,b)=>{if(a instanceof b)return!0;a=Object.getPrototypeOf(a);return a===null?!1:a.constructor.name===b.name||E(a,b)};function F(a,b){return y(b).map(d=>{var c=a.getPropertyValue(d),e=a.getPropertyPriority(d);return`${d}: ${c}${e?" !important":""};`}).join(" ")}
+function G(a,b,d,c){a=window.getComputedStyle(a,d);var e=a.getPropertyValue("content");if(e!==""&&e!=="none"){var f=v();try{b.className=`${b.className} ${f}`}catch(k){return}e=document.createElement("style");var g=e.appendChild;d=`.${f}:${d}`;a.cssText?(c=a.getPropertyValue("content"),c=`${a.cssText} content: '${c.replace(/'|"/g,"")}';`):c=F(a,c);g.call(e,document.createTextNode(`${d}{${c}}`));b.appendChild(e)}};function H(a){return a.search(/^(data:)/)!==-1}function I(a,b,d){return t(function*(){var c=yield fetch(a,b);if(c.status===404)throw Error(`Resource "${c.url}" not found`);var e=yield c.blob();return new Promise((f,g)=>{var k=new FileReader;k.onerror=g;k.onloadend=()=>{try{f(d({o:c,result:k.result}))}catch(m){g(m)}};k.readAsDataURL(e)})})}const J={};function K(a,b,d){var c=a.replace(/\?.*/,"");d&&(c=a);/ttf|otf|eot|woff2?/i.test(c)&&(c=c.replace(/.*\//,""));return b?`[${b}]${c}`:c}
+function L(a,b,d){return t(function*(){var c=K(a,b,d.C);if(J[c]!=null)return J[c];d.u&&(a+=(/\?/.test(a)?"&":"?")+(new Date).getTime());try{let f=yield I(a,d.i,({o:g,result:k})=>{b||(b=g.headers.get("Content-Type")||"");return k.split(/,/)[1]});var e=`data:${b};base64,${f}`}catch(f){e=d.B||""}return J[c]=e})};const M={P:"application/font-woff",R:"application/font-woff",N:"application/font-truetype",v:"application/vnd.ms-fontobject",H:"image/png",F:"image/jpeg",D:"image/jpeg",A:"image/gif",M:"image/tiff",L:"image/svg+xml",O:"image/webp"};function N(a){return(a=/\.([^./]*?)$/g.exec(a))?a[1]:""};function O(a){return t(function*(){var b=a.toDataURL();return b==="data:,"?a.cloneNode(!1):B(b)})}function aa(a,b){return t(function*(){if(a.currentSrc){var d=document.createElement("canvas");let c=d.getContext("2d");d.width=a.clientWidth;d.height=a.clientHeight;c==null||c.drawImage(a,0,0,d.width,d.height);d=d.toDataURL();return B(d)}d=a.poster;d=yield L(d,M[N(d).toLowerCase()]||"",b);return B(d)})}
+function ba(a,b){return t(function*(){try{let d;if(a==null?0:(d=a.contentDocument)==null?0:d.body)return yield P(a.contentDocument.body,b,!0)}catch(d){}return a.cloneNode(!1)})}function ca(a,b){return t(function*(){return E(a,HTMLCanvasElement)?O(a):E(a,HTMLVideoElement)?aa(a,b):E(a,HTMLIFrameElement)?ba(a,b):a.cloneNode(a.tagName!=null&&a.tagName.toUpperCase()==="SVG")})}
+function da(a,b,d){return t(function*(){if(b.tagName!=null&&b.tagName.toUpperCase()==="SVG")return b;var c=[];if(a.tagName!=null&&a.tagName.toUpperCase()==="SLOT"&&a.assignedNodes)c=w(a.assignedNodes());else{let e;if(E(a,HTMLIFrameElement)&&((e=a.contentDocument)==null?0:e.body))c=w(a.contentDocument.body.childNodes);else{let f;c=w(((f=a.shadowRoot)!=null?f:a).childNodes)}}if(c.length===0||E(a,HTMLVideoElement))return b;yield c.reduce((e,f)=>e.then(()=>P(f,d)).then(g=>{g&&b.appendChild(g)}),Promise.resolve());
+return b})}function ea(a,b,d){var c=b.style;if(c){var e=window.getComputedStyle(a);e.cssText?(c.cssText=e.cssText,c.transformOrigin=e.transformOrigin):y(d).forEach(f=>{var g=e.getPropertyValue(f);f==="font-size"&&g.endsWith("px")&&(g=`${Math.floor(parseFloat(g.substring(0,g.length-2)))-.1}px`);E(a,HTMLIFrameElement)&&f==="display"&&g==="inline"&&(g="block");f==="d"&&b.getAttribute("d")&&(g=`path(${b.getAttribute("d")})`);c.setProperty(f,g,e.getPropertyPriority(f))})}}
+function fa(a,b){E(a,HTMLSelectElement)&&(b=Array.from(b.children).find(d=>a.value===d.getAttribute("value")))&&b.setAttribute("selected","")}
+function ha(a,b){return t(function*(){var d=a.querySelectorAll?a.querySelectorAll("use"):[];if(d.length===0)return a;var c={};for(var e=0;e<d.length;e++){var f=d[e].getAttribute("xlink:href");if(f){let g=document.querySelector(f);a.querySelector(f)||!g||c[f]||(c[f]=yield P(g,b,!0))}}d=Object.values(c);if(d.length){c=document.createElementNS("http://www.w3.org/1999/xhtml","svg");c.setAttribute("xmlns","http://www.w3.org/1999/xhtml");c.style.position="absolute";c.style.width="0";c.style.height="0";
+c.style.overflow="hidden";c.style.display="none";e=document.createElementNS("http://www.w3.org/1999/xhtml","defs");c.appendChild(e);for(f=0;f<d.length;f++)e.appendChild(d[f]);a.appendChild(c)}return a})}
+function P(a,b,d){return t(function*(){return d||!b.filter||b.filter(a)?Promise.resolve(a).then(c=>ca(c,b)).then(c=>da(a,c,b)).then(c=>{E(c,Element)&&(ea(a,c,b),G(a,c,":before",b),G(a,c,":after",b),E(a,HTMLTextAreaElement)&&(c.textContent=a.value),E(a,HTMLInputElement)&&c.setAttribute("value",a.value),fa(a,c));return c}).then(c=>ha(c,b)):null})};const Q=/url\((['"]?)([^'"]+?)\1\)/g,ia=/url\([^)]+\)\s*format\((["']?)([^"']+)\1\)/g,ja=/src:\s*(?:url\([^)]+\)\s*format\([^)]+\)[,;]\s*)+/g;function ka(a){var b=[];a.replace(Q,(d,c,e)=>{b.push(e);return d});return b.filter(d=>!H(d))}
+function la(a,b,d,c){return t(function*(){try{let e=d?(new URL(b,d||void 0)).toString():b,f;f=yield L(e,M[N(b).toLowerCase()]||"",c);return a.replace(new RegExp(`(url\\(['"]?)(${b.replace(/([.*+?^${}()|\[\]\/\\])/g,"\\$1")})(['"]?\\))`,"g"),`$1${f}$3`)}catch(e){}return a})}function ma(a,{I:b}){return b?a.replace(ja,d=>{for(;;){let [c,,e]=ia.exec(d)||[];if(!e)return"";if(e===b)return`src: ${c};`}}):a}
+function R(a,b,d){return t(function*(){if(a.search(Q)===-1)return a;var c=ma(a,d);return ka(c).reduce((e,f)=>e.then(g=>la(g,f,b,d)),Promise.resolve(c))})};function S(a,b,d){return t(function*(){var c,e=(c=b.style)==null?void 0:c.getPropertyValue(a);return e?(c=yield R(e,null,d),b.style.setProperty(a,c,b.style.getPropertyPriority(a)),!0):!1})}function na(a,b){return t(function*(){(yield S("background",a,b))||(yield S("background-image",a,b));(yield S("mask",a,b))||(yield S("-webkit-mask",a,b))||(yield S("mask-image",a,b))||(yield S("-webkit-mask-image",a,b))})}
+function oa(a,b){return t(function*(){var d=E(a,HTMLImageElement);if(d&&!H(a.src)||E(a,SVGImageElement)&&!H(a.href.baseVal)){var c=d?a.src:a.href.baseVal,e=yield L(c,M[N(c).toLowerCase()]||"",b);yield new Promise((f,g)=>{a.onload=f;a.onerror=b.m?(...k)=>{try{f(b.m(...k))}catch(m){g(m)}}:g;a.decode&&(a.decode=f);a.loading==="lazy"&&(a.loading="eager");d?(a.srcset="",a.src=e):a.href.baseVal=e})}})}
+function pa(a,b){return t(function*(){var d=w(a.childNodes).map(c=>T(c,b));yield Promise.all(d).then(()=>a)})}function T(a,b){return t(function*(){E(a,Element)&&(yield na(a,b),yield oa(a,b),yield pa(a,b))})};const U={};function V(a){return t(function*(){var b=U[a];if(b!=null)return b;b=yield(yield fetch(a)).text();b={url:a,cssText:b};return U[a]=b})}function W(a,b){return t(function*(){var d=a.cssText,c=/url\(["']?([^"')]+)["']?\)/g,e=(d.match(/url\([^)]+\)/g)||[]).map(f=>t(function*(){var g=f.replace(c,"$1");g.startsWith("https://")||(g=(new URL(g,a.url)).href);return I(g,b.i,({result:k})=>{d=d.replace(f,`url(${k})`);return[f,k]})}));return Promise.all(e).then(()=>d)})}
+function X(a){if(a==null)return[];var b=[];a=a.replace(/(\/\*[\s\S]*?\*\/)/gi,"");for(var d=RegExp("((@.*?keyframes [\\s\\S]*?){([\\s\\S]*?}\\s*?)})","gi");;){var c=d.exec(a);if(c===null)break;b.push(c[0])}a=a.replace(d,"");d=/@import[\s\S]*?url\([^)]*\)[\s\S]*?;/gi;for(c=RegExp("((\\s*?(?:\\/\\*[\\s\\S]*?\\*\\/)?\\s*?@media[\\s\\S]*?){([\\s\\S]*?)}\\s*?})|(([\\s\\S]*?){([\\s\\S]*?)})","gi");;){let e=d.exec(a);if(e===null)if(e=c.exec(a),e===null)break;else d.lastIndex=c.lastIndex;else c.lastIndex=
+d.lastIndex;b.push(e[0])}return b}
+function qa(a,b){return t(function*(){var d=[],c=[];a.forEach(e=>{if("cssRules"in e)try{w(e.cssRules||[]).forEach((f,g)=>{if(f.type===CSSRule.IMPORT_RULE){let k=g+1;f=V(f.href).then(m=>W(m,b)).then(m=>X(m).forEach(q=>{try{e.insertRule(q,q.startsWith("@import")?k+=1:e.cssRules.length)}catch(Da){}})).catch(()=>{});c.push(f)}})}catch(f){let g=a.find(k=>k.href==null)||document.styleSheets[0];e.href!=null&&c.push(V(e.href).then(k=>W(k,b)).then(k=>X(k).forEach(m=>{g.insertRule(m,g.cssRules.length)})).catch(()=>
+{}))}});return Promise.all(c).then(()=>{a.forEach(e=>{if("cssRules"in e)try{w(e.cssRules||[]).forEach(f=>{d.push(f)})}catch(f){}});return d})})}function ra(a){return a.filter(b=>b.type===CSSRule.FONT_FACE_RULE).filter(b=>b.style.getPropertyValue("src").search(Q)!==-1)}function sa(a,b){return t(function*(){if(a.ownerDocument==null)throw Error("Provided element is not within a Document");var d=w(a.ownerDocument.styleSheets);d=yield qa(d,b);return ra(d)})}
+function ta(a){function b(c){(c.style.fontFamily||getComputedStyle(c).fontFamily).split(",").forEach(e=>{d.add(e.trim().replace(/["']/g,""))});Array.from(c.children).forEach(e=>{e instanceof HTMLElement&&b(e)})}var d=new Set;b(a);return d}function ua(a,b){return t(function*(){var d=yield sa(a,b),c=ta(a);return(yield Promise.all(d.filter(e=>c.has(e.style.fontFamily.trim().replace(/["']/g,""))).map(e=>R(e.cssText,e.parentStyleSheet?e.parentStyleSheet.href:null,b)))).join("\n")})}
+function va(a,b){return t(function*(){var d=b.j!=null?b.j:b.K?null:yield ua(a,b);if(d){let c=document.createElement("style");c.appendChild(document.createTextNode(d));a.firstChild?a.insertBefore(c,a.firstChild):a.appendChild(c)}})};function wa(a,b={}){return t(function*(){var {width:d,height:c}=A(a,b),e=yield P(a,b,!0);yield va(e,b);yield T(e,b);u(e,b);return yield D(e,d,c)})}
+function xa(a,b={}){return t(function*(){var {width:d,height:c}=A(a,b),e=yield wa(a,b);e=yield B(e);var f=document.createElement("canvas"),g=f.getContext("2d"),k=b.G||window.devicePixelRatio||1,m=b.h||d,q=b.g||c;f.width=m*k;f.height=q*k;!b.J&&(f.width>16384||f.height>16384)&&(f.width>16384&&f.height>16384?f.width>f.height?(f.height*=16384/f.width,f.width=16384):(f.width*=16384/f.height,f.height=16384):f.width>16384?(f.height*=16384/f.width,f.width=16384):(f.width*=16384/f.height,f.height=16384));
+f.style.width=`${m}`;f.style.height=`${q}`;b.backgroundColor&&(g.fillStyle=b.backgroundColor,g.fillRect(0,0,f.width,f.height));g.drawImage(e,0,0,f.width,f.height);return f})}function ya(a,b={}){return t(function*(){return(yield xa(a,b)).toDataURL()})};const za=["gemini.google.com","corp.google.com","proxy.googlers.com"];function Y(){return document.body.querySelectorAll('[class*="animate"]').length>0}function Z(a){return t(function*(){try{return yield ya(a,{h:a.offsetWidth,g:a.offsetHeight})}catch(d){var b=a.offsetHeight;let c=document.createElement("canvas");c.width=a.offsetWidth;c.height=b;return c.toDataURL("image/png")}})}
+function Aa(){return t(function*(){var a=document.body.offsetWidth,b=document.body.offsetHeight,d=document.body.cloneNode(!0);d.querySelectorAll('[class*="animate"]').forEach(c=>{c.classList.remove(...Array.from(c.classList).filter(e=>e.startsWith("animate")))});d.style.width=`${a}px`;d.style.height=`${b}px`;return d})}
+function Ba(a){return t(function*(){var b=document.body;if(Y()){var d=yield Aa();b=d;document.body.appendChild(d)}d=yield Z(b);Y()&&document.body.removeChild(b);window.parent.postMessage({type:"SEND_SCREENSHOT",image:d,topOffset:document.documentElement.scrollTop},a.origin)})}function Ca(a){return t(function*(){var b={type:"SEND_SCREENSHOT_FOR_DATA_VISUALIZATION",image:yield Z(document.body),topOffset:0};window.parent.postMessage(b,a.origin)})}
+window.addEventListener("message",a=>t(function*(){if(za.some(d=>a.origin.includes(d))){var b=a.data;b&&(b.type==="MAKE_SCREENSHOT"&&(yield Ba(a)),b.type==="MAKE_SCREENSHOT_FOR_DATA_VISUALIZATION"&&(yield Ca(a)))}}));
+})();</script><script data-bard-injected="true">(function() {
+  // Ensure this script is executed only once
+  if (window.firebaseAuthBridgeScriptLoaded) {
+    return;
+  }
+  window.firebaseAuthBridgeScriptLoaded = true;
+
+  let nextTokenPromiseId = 0;
+
+  // Stores { resolve, reject } for ongoing token requests
+  const pendingTokenPromises = {};
+
+  // Listen for messages from the Host Application
+  window.addEventListener('message', function(event) {
+
+    const messageData = event.data;
+
+  if (messageData && messageData.type === 'RESOLVE_NEW_FIREBASE_TOKEN') {
+      const { success, token, error, promiseId } = messageData ?? {};
+      if (pendingTokenPromises[promiseId]) {
+        if (success) {
+          pendingTokenPromises[promiseId].resolve(token);
+        } else {
+          pendingTokenPromises[promiseId].reject(new Error(error || 'Token refresh failed from host.'));
+        }
+        delete pendingTokenPromises[promiseId];
+      }
+    }
+  });
+
+  // Expose a function for the Generated App to request a new Firebase token
+  window.requestNewFirebaseToken = function() {
+    const currentPromiseId = nextTokenPromiseId++;
+    const promise = new Promise((resolve, reject) => {
+      pendingTokenPromises[currentPromiseId] = { resolve, reject };
+    });
+    if (window.parent && window.parent !== window) {
+      window.parent.postMessage({
+        type: 'REQUEST_NEW_FIREBASE_TOKEN',
+        promiseId: currentPromiseId
+      }, '*');
+    } else {
+      pendingTokenPromises[currentPromiseId].reject(new Error('No parent window to request token from.'));
+      delete pendingTokenPromises[currentPromiseId];
+    }
+    return promise;
+  };
+})();</script><script data-bard-injected="true">
+let realOriginalGetUserMedia = null;
+if (navigator.mediaDevices && navigator.mediaDevices.getUserMedia) {
+  realOriginalGetUserMedia = navigator.mediaDevices.getUserMedia.bind(navigator.mediaDevices);
+}
+
+(function() {
+  if (navigator.mediaDevices && navigator.mediaDevices.__proto__) {
+    try {
+      Object.defineProperty(navigator.mediaDevices.__proto__, 'getUserMedia', {
+        get: function() {
+          return undefined; // Or throw an error
+        },
+        configurable: false
+      });
+    } catch (error) {
+      console.error("Error defining prototype getter:", error);
+    }
+  }
+})();
+
+(function() {
+  const pendingMediaResolvers = {};
+  let nextMediaPromiseId = 0;
+
+  function requestMediaPermissions(constraints) {
+    const mediaPromiseId = nextMediaPromiseId++;
+    const promise = new Promise((resolve, reject) => {
+      pendingMediaResolvers[mediaPromiseId] = (granted) => {
+        delete pendingMediaResolvers[mediaPromiseId];
+        resolve(granted);
+      };
+    });
+
+    window.parent.postMessage({
+      type: 'requestMediaPermission',
+      constraints: constraints,
+      promiseId: mediaPromiseId,
+    }, '*');
+
+    return promise;
+  }
+
+  let originalGetUserMedia = realOriginalGetUserMedia;
+
+  function interceptGetUserMedia() {
+    if (navigator.mediaDevices) {
+      Object.defineProperty(navigator.mediaDevices, 'getUserMedia', {
+        value: function(constraints) {
+          return requestMediaPermissions(constraints).then((granted) => {
+            if (granted) {
+              if (originalGetUserMedia) {
+                return originalGetUserMedia(constraints);
+              } else {
+                throw new Error("Original getUserMedia not available.");
+              }
+            } else {
+              throw new DOMException('Permission denied', 'NotAllowedError');
+            }
+          });
+        },
+        writable: false,
+        configurable: false
+      });
+    }
+  }
+
+  interceptGetUserMedia();
+
+  const observer = new MutationObserver(function(mutationsList, observer) {
+    for (const mutation of mutationsList) {
+      if (mutation.type === 'reconfigured' && mutation.name === 'getUserMedia' && mutation.object === navigator.mediaDevices) {
+        interceptGetUserMedia();
+      } else if (mutation.type === 'attributes' && mutation.attributeName === 'getUserMedia' && mutation.target === navigator.mediaDevices) {
+        interceptGetUserMedia();
+      } else if (mutation.type === 'childList' && mutation.addedNodes) {
+        mutation.addedNodes.forEach(node => {
+          if (node === navigator.mediaDevices) {
+            interceptGetUserMedia();
+          }
+        });
+      }
+    }
+  });
+
+  function interceptSpeechRecognition() {
+    if (!window.SpeechRecognition && !window.webkitSpeechRecognition) {
+      return;
+    }
+
+    const OriginalSpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
+
+    const SpeechRecognitionWrapper = function(...args) {
+      const recognizer = new OriginalSpeechRecognition(...args);
+      const originalStart = recognizer.start.bind(recognizer);
+
+      recognizer.start = function() {
+        requestMediaPermissions({ audio: true }).then(granted => {
+          if (granted) {
+            originalStart();
+          } else {
+            const errorEvent = new SpeechRecognitionErrorEvent('error');
+            errorEvent.error = 'not-allowed'; // This is the standard error for permission denial.
+            recognizer.dispatchEvent(errorEvent);
+          }
+        });
+      };
+
+      return recognizer;
+    };
+
+    SpeechRecognitionWrapper.prototype = OriginalSpeechRecognition.prototype;
+    SpeechRecognitionWrapper.prototype.constructor = SpeechRecognitionWrapper;
+
+    if (window.SpeechRecognition) {
+      window.SpeechRecognition = SpeechRecognitionWrapper;
+    }
+    if (window.webkitSpeechRecognition) {
+      window.webkitSpeechRecognition = SpeechRecognitionWrapper;
+    }
+  }
+
+  interceptSpeechRecognition();
+
+  window.addEventListener('message', function(event) {
+    if (event.data) {
+      if (event.data.type === 'resolveMediaPermission') {
+        const { promiseId, granted } = event.data;
+        if (pendingMediaResolvers[promiseId]) {
+          pendingMediaResolvers[promiseId](granted);
+        }
+      }
+    }
+  });
+
+})();</script><script ws-interception-config="{&quot;parentOrigin&quot;:&quot;https://gemini.google.com&quot;,&quot;proxiedDomains&quot;:[]}" data-bard-injected="true">(function(){'use strict';var u=typeof Object.defineProperties=="function"?Object.defineProperty:function(b,d,e){if(b==Array.prototype||b==Object.prototype)return b;b[d]=e.value;return b};function v(b){b=["object"==typeof globalThis&&globalThis,b,"object"==typeof window&&window,"object"==typeof self&&self,"object"==typeof global&&global];for(var d=0;d<b.length;++d){var e=b[d];if(e&&e.Math==Math)return e}throw Error("Cannot find global object");}var w=v(this);
+function y(b,d){if(d)a:{var e=w;b=b.split(".");for(var h=0;h<b.length-1;h++){var k=b[h];if(!(k in e))break a;e=e[k]}b=b[b.length-1];h=e[b];d=d(h);d!=h&&d!=null&&u(e,b,{configurable:!0,writable:!0,value:d})}}function z(b){function d(h){return b.next(h)}function e(h){return b.throw(h)}return new Promise(function(h,k){function m(n){n.done?h(n.value):Promise.resolve(n.value).then(d,e).then(m,k)}m(b.next())})}y("globalThis",function(b){return b||w});/*
+
+ Copyright The Closure Library Authors.
+ SPDX-License-Identifier: Apache-2.0
+*/
+function A(b,d){function e(){}e.prototype=d.prototype;b.i=d.prototype;b.prototype=new e;b.prototype.constructor=b;b.g=function(h,k,m){for(var n=Array(arguments.length-2),p=2;p<arguments.length;p++)n[p-2]=arguments[p];return d.prototype[k].apply(h,n)}};function B(b,d,e="*"){function h(a){if(typeof a==="string")return F.encode(a).buffer;if(a instanceof ArrayBuffer)return a.slice(0);if(ArrayBuffer.isView(a))return a.buffer.slice(a.byteOffset,a.byteOffset+a.byteLength);throw Error("Invalid data type");}function k(a){a=h(a);var f={type:"send",data:new Uint8Array(a)},g;(g=r)==null||g.postMessage(f,[a])}function m(){if(!r)throw Error("Data port not captured yet.");r.onmessage=a=>{if(a.data.type==="message"){a=new MessageEvent("message",{data:G.decode(a.data.data)});
+let f;(f=c.onmessage)==null||f.call(c,a);c.dispatchEvent(a)}}}function n(){if(!t)throw Error("Control port not captured yet.");t.onmessage=a=>{switch(a.data.type){case "open":l=1;var f=new Event("open"),g;(g=c.onopen)==null||g.call(c,f);c.dispatchEvent(f);q.forEach(H=>{k(H)});q=[];break;case "close":g=a.data;l=3;g=new CloseEvent("close",{code:g.code,reason:g.reason,wasClean:g.wasClean});(f=c.onclose)==null||f.call(c,g);c.dispatchEvent(g);break;case "error":l=3;f=new Event("error");let x;(x=c.onerror)==
+null||x.call(c,f);c.dispatchEvent(f)}}}function p(a){return z(function*(){var f=new MessageChannel;t=f.port1;var g=new MessageChannel;r=g.port1;n();m();window.parent.postMessage({type:"websocket_open",portOrdering:["control","data"],url:b,protocols:a||[],connectionId:I},e,[f.port2,g.port2])}())}var c=Reflect.construct(EventTarget,[],new.target);c.CONNECTING=0;c.OPEN=1;c.CLOSING=2;c.CLOSED=3;c.url=b;c.binaryType="arraybuffer";c.protocol="";c.h="";var l=0,t=null,r=null,q=[],F=new TextEncoder,G=new TextDecoder;
+c.onopen=null;c.onmessage=null;c.onclose=null;c.onerror=null;Object.defineProperty(c,"readyState",{get:()=>l,enumerable:!0,configurable:!0});Object.defineProperty(c,"bufferedAmount",{get:()=>{var a=0;q.forEach(f=>{a+=typeof f==="string"?f.length:f.byteLength});return a},enumerable:!0,configurable:!0});var I=function(){var a;return((a=globalThis.crypto)==null?0:a.randomUUID)?globalThis.crypto.randomUUID():"xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx".replace(/[xy]/g,f=>{var g=Math.random()*16|0;return(f===
+"x"?g:g&3|8).toString(16)})}();c.send=a=>{if(l===1)a instanceof Blob?a.arrayBuffer().then(f=>{k(f)}):k(a);else if(l===0)if(typeof a==="string")q.push(a);else if(a instanceof ArrayBuffer||ArrayBuffer.isView(a))q.push(h(a));else throw Error("Sending Blob is not supported before the connection is open.");else console.debug("WebSocket send called in CLOSING or CLOSED state; ignored.")};c.close=(a=1E3,f="")=>{if(l!==2&&l!==3){l=2;a={type:"close",code:a,reason:f,wasClean:a===1E3};var g;(g=t)==null||g.postMessage(a)}};
+Promise.resolve().then(()=>p(d));return c}A(B,EventTarget);var C=document.currentScript,D=C==null?void 0:C.getAttribute("ws-interception-config");if(!D)throw Error("WebSocket Interceptor: Missing ws-interception-config attribute in the script tag.");var E=JSON.parse(D);if(!E.parentOrigin||typeof E.parentOrigin!=="string")throw Error("WebSocket Interceptor: Invalid parentOrigin in ws-interception-config");
+(function(b){var d=Object.getOwnPropertyDescriptor(window,"WebSocket");if(!d||d.writable||d.configurable)d=Object.assign(function(e,h){try{let k=(new URL(e)).hostname;if(b.proxiedDomains.some(m=>k===m||k.endsWith(`.${m}`)))return new B(e,h,b.parentOrigin)}catch(k){throw window.parent.postMessage({type:"websocket_blocked",url:e,reason:"blocked_invalid_url"},b.parentOrigin),new DOMException(`WebSocket connection to '${e}' is not allowed in Canvas.`,"SecurityError");}window.parent.postMessage({type:"websocket_blocked",
+url:e,reason:"blocked_domain_not_allowlisted"},b.parentOrigin);throw new DOMException(`WebSocket connection to '${e}' is not allowed in Canvas.`,"SecurityError");},{CONNECTING:0,OPEN:1,CLOSING:2,CLOSED:3}),Object.defineProperty(window,"WebSocket",{value:d,writable:!1,configurable:!1})})({proxiedDomains:E.proxiedDomains||[],parentOrigin:E.parentOrigin});}).call(this);
+</script><script data-bard-injected="true">((function(modelInformation) {
+  const originalFetch = window.fetch;
+  // TODO: b/421908508 - Move these out of the script and match all generative AI model calls.
+  let googleLlmBaseApiUrls = [
+    'https://generativelanguage.googleapis.com/v1beta/models/' + modelInformation.textModelName + ':streamGenerateContent',
+    'https://generativelanguage.googleapis.com/v1beta/models/' + modelInformation.textModelName + ':generateContent',
+    'https://generativelanguage.googleapis.com/v1beta/models/' + modelInformation.imageModelName + ':predict',
+    'https://generativelanguage.googleapis.com/v1beta/models/' + modelInformation.imageModelName + ':predictLongRunning',
+    'https://generativelanguage.googleapis.com/v1beta/models/' + modelInformation.imageEditModelName + ':generateContent',
+    'https://generativelanguage.googleapis.com/v1beta/models/' + modelInformation.imageTransformModelName + ':generateContent',
+    'https://generativelanguage.googleapis.com/v1beta/models/' + modelInformation.videoModelName + ':predict',
+    'https://generativelanguage.googleapis.com/v1beta/models/' + modelInformation.videoModelName + ':predictLongRunning',
+    'https://generativelanguage.googleapis.com/v1beta/models/' + modelInformation.ttsModelName + ':generateContent',
+  ];
+  modelInformation.deprecatedTextModelNames.forEach((modelName) => {
+    googleLlmBaseApiUrls.push(
+      'https://generativelanguage.googleapis.com/v1beta/models/' + modelName + ':streamGenerateContent',
+      'https://generativelanguage.googleapis.com/v1beta/models/' + modelName + ':generateContent',
+    );
+  });
+  modelInformation.deprecatedImageModelNames.forEach((modelName) => {
+    googleLlmBaseApiUrls.push(
+      'https://generativelanguage.googleapis.com/v1beta/models/' + modelName + ':predict',
+      'https://generativelanguage.googleapis.com/v1beta/models/' + modelName + ':predictLongRunning',
+      'https://generativelanguage.googleapis.com/v1beta/models/' + modelName + ':generateContent',
+      'https://generativelanguage.googleapis.com/v1beta/models/' + modelName + ':streamGenerateContent',
+    );
+  });
+  modelInformation.deprecatedGenerateImageModelNames.forEach((modelName) => {
+    googleLlmBaseApiUrls.push(
+      'https://generativelanguage.googleapis.com/v1beta/models/' + modelName + ':generateContent',
+      'https://generativelanguage.googleapis.com/v1beta/models/' + modelName + ':streamGenerateContent',
+    );
+  });
+  modelInformation.deprecatedImageTransformModelNames.forEach((modelName) => {
+    googleLlmBaseApiUrls.push(
+      'https://generativelanguage.googleapis.com/v1beta/models/' + modelName + ':generateContent',
+      'https://generativelanguage.googleapis.com/v1beta/models/' + modelName + ':streamGenerateContent',
+    );
+  });
+
+  const pendingFetchResolvers = {};
+  let nextPromiseId = 0;
+
+  function handleStringInput(input, optionsArgument) {
+    const actualUrl = input;
+    const fetchCallArgs = [actualUrl, optionsArgument];
+    const effectiveOptions = optionsArgument || {};
+    const bodyForApiKeyCheck = effectiveOptions.body;
+    const bodyForPostMessage = effectiveOptions.body;
+    return { actualUrl, fetchCallArgs, effectiveOptions, bodyForApiKeyCheck, bodyForPostMessage };
+  }
+
+  function handleRequestInput(input, optionsArgument) {
+    const actualUrl = input.url;
+    const fetchCallArgs = [input, optionsArgument];
+    const effectiveOptions = { method: input.method, headers: new Headers(input.headers) };
+    let bodyForApiKeyCheck;
+    let bodyForPostMessage;
+
+    if (optionsArgument) {
+      if (optionsArgument.method) effectiveOptions.method = optionsArgument.method;
+      if (optionsArgument.headers) effectiveOptions.headers = new Headers(optionsArgument.headers);
+      if ('body' in optionsArgument) {
+        bodyForApiKeyCheck = optionsArgument.body;
+        bodyForPostMessage = optionsArgument.body;
+      } else {
+        bodyForApiKeyCheck = undefined;
+        bodyForPostMessage = input.body;
+      }
+    } else {
+      bodyForApiKeyCheck = undefined;
+      bodyForPostMessage = input.body;
+    }
+    return { actualUrl, fetchCallArgs, effectiveOptions, bodyForApiKeyCheck, bodyForPostMessage };
+  }
+
+  window.fetch = function(input, optionsArgument) {
+    let actualUrl;
+    let fetchCallArgs;
+    let effectiveOptions = {};
+    let bodyForApiKeyCheck;
+    let bodyForPostMessage;
+
+    if (typeof input === 'string') {
+      ({actualUrl, fetchCallArgs, effectiveOptions, bodyForApiKeyCheck, bodyForPostMessage} = handleStringInput(input, optionsArgument));
+    } else if (input instanceof Request) {
+      ({actualUrl, fetchCallArgs, effectiveOptions, bodyForApiKeyCheck, bodyForPostMessage} = handleRequestInput(input, optionsArgument));
+    } else {
+      return originalFetch.apply(window, [input, optionsArgument]);
+    }
+
+    effectiveOptions.method = effectiveOptions.method || 'GET';
+    if (!effectiveOptions.headers) {
+      effectiveOptions.headers = new Headers();
+    }
+
+
+    if (typeof actualUrl === 'string' && googleLlmBaseApiUrls.some((url) => actualUrl.startsWith(url))) {
+      let apiKeyIsNull = true;
+
+      const regex = new RegExp("models/([^:]+)");
+      const modelNameMatch = actualUrl.match(regex);
+      const modelName = modelNameMatch ? modelNameMatch[1] : 'unspecified';
+
+
+      try {
+        const urlObject = new URL(actualUrl);  // Use URL object for robust parsing
+        const apiKeyParam = urlObject.searchParams.get('key');
+        if (apiKeyParam) {
+          apiKeyIsNull = false;
+        }
+      } catch (e) {
+        // Continue checks even if URL parsing fails
+      }
+
+      if (apiKeyIsNull && effectiveOptions.headers) {
+        const h = new Headers(effectiveOptions.headers);
+        const apiKeyHeaderValue = h.get('X-API-Key') || h.get('x-api-key');
+        if (apiKeyHeaderValue) {
+          apiKeyIsNull = false;
+          return originalFetch.apply(window, fetchCallArgs);
+        }
+      }
+
+      if (apiKeyIsNull && effectiveOptions.method && ['POST', 'PUT', 'PATCH'].includes(effectiveOptions.method.toUpperCase()) && typeof bodyForApiKeyCheck === 'string') {
+        try {
+          const bodyData = JSON.parse(bodyForApiKeyCheck);
+          if (bodyData && bodyData.apiKey) {
+            apiKeyIsNull = false;
+            return originalFetch.apply(window, fetchCallArgs);
+          }
+        } catch (e) {
+          // Ignore JSON parsing errors
+        }
+      }
+
+      if(apiKeyIsNull) {
+        const promiseId = nextPromiseId++;
+        const promise = new Promise((resolve) => {
+          pendingFetchResolvers[promiseId] = (resolvedResponse) => {
+            delete pendingFetchResolvers[promiseId];
+            resolve(resolvedResponse);
+          };
+        });
+
+        let serializedBodyForPostMessage;
+        if (typeof bodyForPostMessage === 'string' || bodyForPostMessage == null) {
+            serializedBodyForPostMessage = bodyForPostMessage;
+        } else if (bodyForPostMessage instanceof ReadableStream) {
+            serializedBodyForPostMessage = null;
+        } else {
+            try {
+                serializedBodyForPostMessage = JSON.stringify(bodyForPostMessage);
+            } catch (e) {
+                serializedBodyForPostMessage = null;
+            }
+        }
+
+        const messageOptions = {
+            method: effectiveOptions.method,
+            headers: Object.fromEntries(new Headers(effectiveOptions.headers).entries()),
+            body: serializedBodyForPostMessage
+        };
+
+        window.parent.postMessage({
+          type: 'requestFetch',
+          url: actualUrl,
+          modelName: modelName,
+          options: messageOptions,
+          promiseId: promiseId,
+        }, '*');
+
+        return promise;
+      }
+      return originalFetch.apply(window, fetchCallArgs);
+    }
+    return originalFetch.apply(window, fetchCallArgs);
+  };
+
+  window.addEventListener('message', function(event) {
+    if (event.data && event.data.type === 'resolveFetch') {
+      const { promiseId, response } = event.data;
+      if (pendingFetchResolvers[promiseId]) {
+        try {
+          const reconstructedResponse = new Response(response.body, {
+            status: response.status,
+            statusText: response.statusText,
+            headers: new Headers(response.headers),
+          });
+          pendingFetchResolvers[promiseId](reconstructedResponse);
+        } catch (error) {
+          pendingFetchResolvers[promiseId](new Response(null, { status: 500, statusText: "Interceptor Response Reconstruction Error" }));
+        }
+      }
+    }
+  });
+
+}))({"textModelName":"gemini-3-flash-preview","imageModelName":"imagen-4.0-generate-001","imageEditModelName":"gemini-3.1-flash-image","imageTransformModelName":"gemini-3-pro-image","videoModelName":"veo-2.0-generate-001","ttsModelName":"gemini-2.5-flash-preview-tts","deprecatedTextModelNames":["gemini-2.0-flash","gemini-2.5-flash","gemini-2.5-flash-preview-04-17","gemini-2.5-flash-preview-05-20","gemini-2.5-flash-preview-09-2025"],"deprecatedImageModelNames":["imagen-3.0-generate-001","imagen-3.0-generate-002"],"deprecatedGenerateImageModelNames":["gemini-2.5-flash-image-preview","gemini-2.5-flash-image","gemini-3.1-flash-image-preview"],"deprecatedImageTransformModelNames":["gemini-3-pro-image-preview-11-2025"]})</script><script data-bard-injected="true">(function(){'use strict';function a(){window.parent.postMessage({type:"interaction"},"*")}window.addEventListener("click",a,{capture:!0,passive:!0});window.addEventListener("touchstart",a,{capture:!0,passive:!0});window.addEventListener("keydown",a,{capture:!0,passive:!0});}).call(this);
+</script><script data-bard-injected="true">(function() {
+  const originalConsoleLog = console.log;
+  const originalConsoleError = console.error;
+
+    /**
+   * Normalizes an error event or a promise rejection reason into a structured error object.
+   * @param {*} errorEventOrReason The error object or reason.
+   * @return {object} Structured error data { message, name, stack }.
+   */
+  function getErrorObject(errorEventOrReason) {
+    if (errorEventOrReason instanceof Error) {
+      return {
+        message: errorEventOrReason.message,
+        name: errorEventOrReason.name,
+        stack: errorEventOrReason.stack,
+      };
+    }
+    // Fallback for non-Error objects.
+    try {
+      return {
+        message: JSON.stringify(errorEventOrReason),
+        name: 'UnknownErrorType',
+        stack: null,
+      };
+    } catch (e) {
+      return {
+        message: String(errorEventOrReason),
+        name: 'UnknownErrorTypeNonStringifiable',
+        stack: null,
+      };
+    }
+  }
+
+  /**
+   * Converts an array of arguments (from log/error) into a single string.
+   * Handles Error objects specially to include their message and stack.
+   * @param {Array<*>} args - Arguments passed to console methods.
+   * @return {string} A string representation of the arguments.
+   */
+  function stringifyArgs(args) {
+    return args
+      .map((arg) => {
+        if (arg instanceof Error) {
+          const {message, stack} = arg;
+          return `Error: ${message}${stack ? ('\nStack: ' + stack) : ''}`;
+        }
+        if (typeof arg === 'object' && arg !== null) {
+          try {
+            return JSON.stringify(arg);
+          } catch (error) {
+            return '[Circular Object]';
+          }
+        } else {
+          return String(arg);
+        }
+      })
+      .join(' ');
+  }
+
+  console.log = function(...args) {
+    const logString = stringifyArgs(args);
+    window.parent.postMessage({ type: 'log', message: logString }, '*');
+    originalConsoleLog.apply(console, args);
+  };
+
+  console.error = function(...args) {
+    let errorData;
+    if (args.length > 0 && args[0] instanceof Error) {
+      const err = args[0];
+      // If the first arg is an Error, capture its details.
+      errorData = {
+        type: 'error',
+        source: 'CONSOLE_ERROR',
+        ...getErrorObject(err),
+        rawArgsString: stringifyArgs(args.slice(1)),
+        timestamp: new Date().toISOString(),
+      };
+    } else {
+      // If not an Error object, treat all args as a general error message.
+      errorData = {
+        type: 'error',
+        source: 'CONSOLE_ERROR',
+        message: stringifyArgs(args),
+        name: 'ConsoleLoggedError',
+        stack: null,
+        timestamp: new Date().toISOString(),
+      };
+    }
+    window.parent.postMessage(errorData, '*');
+    originalConsoleError.apply(console, args);
+  };
+
+  // Listen for global unhandled synchronous errors.
+  window.addEventListener('error', function(event) {
+    const errorDetails = event.error ? getErrorObject(event.error) : {
+      message: event.message,
+      name: 'GlobalError',
+      stack: null,
+      filename: event.filename,
+      lineno: event.lineno,
+      colno: event.colno,
+    };
+
+    window.parent.postMessage({
+      type: 'error',
+      source: 'global',
+      ...errorDetails,
+      message: errorDetails.message || event.message,
+      timestamp: new Date().toISOString(),
+    }, '*');
+  });
+
+  // Listen for unhandled promise rejections (asynchronous errors).
+  window.addEventListener('unhandledrejection', function(event) {
+    const errorDetails = getErrorObject(event.reason);
+
+    window.parent.postMessage({
+      type: 'error',
+      source: 'unhandledrejection',
+      ...errorDetails,
+      message: errorDetails.message || 'Unhandled Promise Rejection',
+      timestamp: new Date().toISOString(),
+    }, '*');
+  });
+
+})();</script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Operation Sable Trident - Master OPORD Suite (Eyl, Somalia)</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600;700&amp;family=Montserrat:wght@500;600;700;800&amp;family=Oswald:wght@500;600;700&amp;family=Roboto:wght@300;400;500;700&amp;display=swap" rel="stylesheet">
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest" crossorigin="anonymous"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        tactical: {
+                            bg: '#12151B',
+                            card: '#1E222A',
+                            panel: '#252A34',
+                            border: '#333A48',
+                            olive: '#4B5320',
+                            gold: '#D4AF37',
+                            amber: '#FFBF00',
+                            red: '#D32F2F',
+                            text: '#E2E8F0',
+                            muted: '#94A3B8'
+                        }
+                    },
+                    fontFamily: {
+                        oswald: ['Oswald', 'sans-serif'],
+                        montserrat: ['Montserrat', 'sans-serif'],
+                        roboto: ['Roboto', 'sans-serif'],
+                        mono: ['JetBrains Mono', 'monospace']
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            background-color: #12151B;
+            color: #E2E8F0;
+            font-family: 'Roboto', sans-serif;
+            overflow-x: hidden;
+        }
+
+        .scanlines {
+            background: linear-gradient(rgba(18, 21, 27, 0) 50%, rgba(0, 0, 0, 0.25) 50%), linear-gradient(90deg, rgba(255, 0, 0, 0.02), rgba(0, 255, 0, 0.01), rgba(0, 0, 255, 0.02));
+            background-size: 100% 4px, 6px 100%;
+            pointer-events: none;
+        }
+
+        body.edit-mode [contenteditable="true"] {
+            outline: 1px dashed #D4AF37 !important;
+            outline-offset: 2px;
+            background-color: rgba(212, 175, 55, 0.05);
+            border-radius: 2px;
+        }
+        body.edit-mode [contenteditable="true"]:focus {
+            outline: 2px solid #FFBF00 !important;
+            background-color: rgba(255, 191, 0, 0.12);
+        }
+
+        ::-webkit-scrollbar { width: 6px; height: 6px; }
+        ::-webkit-scrollbar-track { background: #12151B; }
+        ::-webkit-scrollbar-thumb { background: #333A48; border-radius: 3px; }
+        ::-webkit-scrollbar-thumb:hover { background: #D4AF37; }
+    </style>
+<style>*, ::before, ::after{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-gradient-from-position: ;--tw-gradient-via-position: ;--tw-gradient-to-position: ;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgb(59 130 246 / 0.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: ;--tw-contain-size: ;--tw-contain-layout: ;--tw-contain-paint: ;--tw-contain-style: }::backdrop{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-gradient-from-position: ;--tw-gradient-via-position: ;--tw-gradient-to-position: ;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgb(59 130 246 / 0.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: ;--tw-contain-size: ;--tw-contain-layout: ;--tw-contain-paint: ;--tw-contain-style: }/* ! tailwindcss v3.4.17 | MIT License | https://tailwindcss.com */*,::after,::before{box-sizing:border-box;border-width:0;border-style:solid;border-color:#e5e7eb}::after,::before{--tw-content:''}:host,html{line-height:1.5;-webkit-text-size-adjust:100%;-moz-tab-size:4;tab-size:4;font-family:ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";font-feature-settings:normal;font-variation-settings:normal;-webkit-tap-highlight-color:transparent}body{margin:0;line-height:inherit}hr{height:0;color:inherit;border-top-width:1px}abbr:where([title]){-webkit-text-decoration:underline dotted;text-decoration:underline dotted}h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight:inherit}a{color:inherit;text-decoration:inherit}b,strong{font-weight:bolder}code,kbd,pre,samp{font-family:JetBrains Mono, monospace;font-feature-settings:normal;font-variation-settings:normal;font-size:1em}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}table{text-indent:0;border-color:inherit;border-collapse:collapse}button,input,optgroup,select,textarea{font-family:inherit;font-feature-settings:inherit;font-variation-settings:inherit;font-size:100%;font-weight:inherit;line-height:inherit;letter-spacing:inherit;color:inherit;margin:0;padding:0}button,select{text-transform:none}button,input:where([type=button]),input:where([type=reset]),input:where([type=submit]){-webkit-appearance:button;background-color:transparent;background-image:none}:-moz-focusring{outline:auto}:-moz-ui-invalid{box-shadow:none}progress{vertical-align:baseline}::-webkit-inner-spin-button,::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}::-webkit-search-decoration{-webkit-appearance:none}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}summary{display:list-item}blockquote,dd,dl,figure,h1,h2,h3,h4,h5,h6,hr,p,pre{margin:0}fieldset{margin:0;padding:0}legend{padding:0}menu,ol,ul{list-style:none;margin:0;padding:0}dialog{padding:0}textarea{resize:vertical}input::placeholder,textarea::placeholder{opacity:1;color:#9ca3af}[role=button],button{cursor:pointer}:disabled{cursor:default}audio,canvas,embed,iframe,img,object,svg,video{display:block;vertical-align:middle}img,video{max-width:100%;height:auto}[hidden]:where(:not([hidden=until-found])){display:none}.fixed{position:fixed}.relative{position:relative}.inset-0{inset:0px}.right-6{right:1.5rem}.top-16{top:4rem}.z-20{z-index:20}.z-50{z-index:50}.mx-auto{margin-left:auto;margin-right:auto}.mb-1{margin-bottom:0.25rem}.mb-4{margin-bottom:1rem}.mb-2{margin-bottom:0.5rem}.mb-6{margin-bottom:1.5rem}.mt-1{margin-top:0.25rem}.mt-2{margin-top:0.5rem}.mt-3{margin-top:0.75rem}.block{display:block}.flex{display:flex}.hidden{display:none}.h-3\.5{height:0.875rem}.h-4{height:1rem}.h-5{height:1.25rem}.min-h-screen{min-height:100vh}.w-3\.5{width:0.875rem}.w-4{width:1rem}.w-5{width:1.25rem}.w-full{width:100%}.w-px{width:1px}.max-w-6xl{max-width:72rem}.max-w-lg{max-width:32rem}.flex-1{flex:1 1 0%}.translate-x-80{--tw-translate-x:20rem;transform:translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}.transform{transform:translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}@keyframes pulse{50%{opacity:.5}}.animate-pulse{animation:pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite}.select-none{-webkit-user-select:none;user-select:none}.list-inside{list-style-position:inside}.list-disc{list-style-type:disc}.flex-col{flex-direction:column}.flex-wrap{flex-wrap:wrap}.items-start{align-items:flex-start}.items-center{align-items:center}.justify-center{justify-content:center}.justify-between{justify-content:space-between}.gap-1\.5{gap:0.375rem}.gap-2{gap:0.5rem}.gap-3{gap:0.75rem}.space-x-1\.5 > :not([hidden]) ~ :not([hidden]){--tw-space-x-reverse:0;margin-right:calc(0.375rem * var(--tw-space-x-reverse));margin-left:calc(0.375rem * calc(1 - var(--tw-space-x-reverse)))}.space-x-2 > :not([hidden]) ~ :not([hidden]){--tw-space-x-reverse:0;margin-right:calc(0.5rem * var(--tw-space-x-reverse));margin-left:calc(0.5rem * calc(1 - var(--tw-space-x-reverse)))}.space-x-3 > :not([hidden]) ~ :not([hidden]){--tw-space-x-reverse:0;margin-right:calc(0.75rem * var(--tw-space-x-reverse));margin-left:calc(0.75rem * calc(1 - var(--tw-space-x-reverse)))}.space-y-4 > :not([hidden]) ~ :not([hidden]){--tw-space-y-reverse:0;margin-top:calc(1rem * calc(1 - var(--tw-space-y-reverse)));margin-bottom:calc(1rem * var(--tw-space-y-reverse))}.space-y-1 > :not([hidden]) ~ :not([hidden]){--tw-space-y-reverse:0;margin-top:calc(0.25rem * calc(1 - var(--tw-space-y-reverse)));margin-bottom:calc(0.25rem * var(--tw-space-y-reverse))}.space-y-6 > :not([hidden]) ~ :not([hidden]){--tw-space-y-reverse:0;margin-top:calc(1.5rem * calc(1 - var(--tw-space-y-reverse)));margin-bottom:calc(1.5rem * var(--tw-space-y-reverse))}.overflow-x-auto{overflow-x:auto}.whitespace-nowrap{white-space:nowrap}.rounded{border-radius:0.25rem}.rounded-lg{border-radius:0.5rem}.border{border-width:1px}.border-b{border-bottom-width:1px}.border-t{border-top-width:1px}.border-tactical-amber{--tw-border-opacity:1;border-color:rgb(255 191 0 / var(--tw-border-opacity, 1))}.border-tactical-border{--tw-border-opacity:1;border-color:rgb(51 58 72 / var(--tw-border-opacity, 1))}.border-tactical-gold{--tw-border-opacity:1;border-color:rgb(212 175 55 / var(--tw-border-opacity, 1))}.border-tactical-olive{--tw-border-opacity:1;border-color:rgb(75 83 32 / var(--tw-border-opacity, 1))}.border-tactical-red{--tw-border-opacity:1;border-color:rgb(211 47 47 / var(--tw-border-opacity, 1))}.bg-black\/80{background-color:rgb(0 0 0 / 0.8)}.bg-tactical-amber\/20{background-color:rgb(255 191 0 / 0.2)}.bg-tactical-border{--tw-bg-opacity:1;background-color:rgb(51 58 72 / var(--tw-bg-opacity, 1))}.bg-tactical-card{--tw-bg-opacity:1;background-color:rgb(30 34 42 / var(--tw-bg-opacity, 1))}.bg-tactical-gold{--tw-bg-opacity:1;background-color:rgb(212 175 55 / var(--tw-bg-opacity, 1))}.bg-tactical-olive\/30{background-color:rgb(75 83 32 / 0.3)}.bg-tactical-olive\/40{background-color:rgb(75 83 32 / 0.4)}.bg-tactical-panel{--tw-bg-opacity:1;background-color:rgb(37 42 52 / var(--tw-bg-opacity, 1))}.bg-tactical-red\/20{background-color:rgb(211 47 47 / 0.2)}.p-2{padding:0.5rem}.p-4{padding:1rem}.p-6{padding:1.5rem}.p-2\.5{padding:0.625rem}.p-3{padding:0.75rem}.px-2\.5{padding-left:0.625rem;padding-right:0.625rem}.px-3{padding-left:0.75rem;padding-right:0.75rem}.px-4{padding-left:1rem;padding-right:1rem}.py-1{padding-top:0.25rem;padding-bottom:0.25rem}.py-1\.5{padding-top:0.375rem;padding-bottom:0.375rem}.py-2{padding-top:0.5rem;padding-bottom:0.5rem}.py-2\.5{padding-top:0.625rem;padding-bottom:0.625rem}.py-3{padding-top:0.75rem;padding-bottom:0.75rem}.pb-2{padding-bottom:0.5rem}.pb-1{padding-bottom:0.25rem}.pb-4{padding-bottom:1rem}.pl-2{padding-left:0.5rem}.text-left{text-align:left}.font-mono{font-family:JetBrains Mono, monospace}.font-oswald{font-family:Oswald, sans-serif}.font-montserrat{font-family:Montserrat, sans-serif}.text-lg{font-size:1.125rem;line-height:1.75rem}.text-xs{font-size:0.75rem;line-height:1rem}.text-2xl{font-size:1.5rem;line-height:2rem}.text-base{font-size:1rem;line-height:1.5rem}.font-bold{font-weight:700}.font-normal{font-weight:400}.uppercase{text-transform:uppercase}.leading-relaxed{line-height:1.625}.tracking-wide{letter-spacing:0.025em}.tracking-wider{letter-spacing:0.05em}.text-slate-950{--tw-text-opacity:1;color:rgb(2 6 23 / var(--tw-text-opacity, 1))}.text-tactical-amber{--tw-text-opacity:1;color:rgb(255 191 0 / var(--tw-text-opacity, 1))}.text-tactical-gold{--tw-text-opacity:1;color:rgb(212 175 55 / var(--tw-text-opacity, 1))}.text-tactical-muted{--tw-text-opacity:1;color:rgb(148 163 184 / var(--tw-text-opacity, 1))}.text-white{--tw-text-opacity:1;color:rgb(255 255 255 / var(--tw-text-opacity, 1))}.text-gray-200{--tw-text-opacity:1;color:rgb(229 231 235 / var(--tw-text-opacity, 1))}.text-tactical-red{--tw-text-opacity:1;color:rgb(211 47 47 / var(--tw-text-opacity, 1))}.opacity-40{opacity:0.4}.shadow-2xl{--tw-shadow:0 25px 50px -12px rgb(0 0 0 / 0.25);--tw-shadow-colored:0 25px 50px -12px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.shadow-lg{--tw-shadow:0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);--tw-shadow-colored:0 10px 15px -3px var(--tw-shadow-color), 0 4px 6px -4px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.shadow-md{--tw-shadow:0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);--tw-shadow-colored:0 4px 6px -1px var(--tw-shadow-color), 0 2px 4px -2px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.outline-none{outline:2px solid transparent;outline-offset:2px}.backdrop-blur-sm{--tw-backdrop-blur:blur(4px);-webkit-backdrop-filter:var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);backdrop-filter:var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia)}.transition{transition-property:color, background-color, border-color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-text-decoration-color, -webkit-backdrop-filter;transition-property:color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;transition-property:color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-text-decoration-color, -webkit-backdrop-filter;transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);transition-duration:150ms}.transition-transform{transition-property:transform;transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);transition-duration:150ms}.duration-300{transition-duration:300ms}.hover\:bg-tactical-amber:hover{--tw-bg-opacity:1;background-color:rgb(255 191 0 / var(--tw-bg-opacity, 1))}.hover\:bg-tactical-border:hover{--tw-bg-opacity:1;background-color:rgb(51 58 72 / var(--tw-bg-opacity, 1))}.hover\:bg-tactical-olive:hover{--tw-bg-opacity:1;background-color:rgb(75 83 32 / var(--tw-bg-opacity, 1))}.hover\:text-white:hover{--tw-text-opacity:1;color:rgb(255 255 255 / var(--tw-text-opacity, 1))}.focus\:border-tactical-gold:focus{--tw-border-opacity:1;border-color:rgb(212 175 55 / var(--tw-border-opacity, 1))}@media (min-width: 768px){.md\:p-10{padding:2.5rem}.md\:p-8{padding:2rem}.md\:px-6{padding-left:1.5rem;padding-right:1.5rem}.md\:text-sm{font-size:0.875rem;line-height:1.25rem}.md\:text-3xl{font-size:1.875rem;line-height:2.25rem}}</style></head>
+<body class="min-h-screen flex flex-col justify-between relative select-none">
+    <div class="scanlines fixed inset-0 z-50 opacity-40"></div>
+
+    <!-- TOAST NOTIFICATION -->
+    <div id="toast" class="fixed top-16 right-6 z-50 bg-tactical-gold text-slate-950 font-mono font-bold text-xs px-4 py-2.5 rounded shadow-2xl flex items-center gap-2 transform translate-x-80 transition-transform duration-300">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="check-circle" aria-hidden="true" class="lucide lucide-check-circle w-4 h-4"><path d="M21.801 10A10 10 0 1 1 17 3.335"></path><path d="m9 11 3 3L22 4"></path></svg>
+        <span id="toastMsg">Operation Completed</span>
+    </div>
+
+    <!-- MAIN HEADER -->
+    <header class="bg-tactical-card border-b border-tactical-border px-4 md:px-6 py-3 flex flex-wrap justify-between items-center z-20 shadow-lg gap-3">
+        <div class="flex items-center space-x-3">
+            <div class="bg-tactical-olive/30 border border-tactical-olive px-2.5 py-1 rounded text-tactical-gold font-mono text-xs tracking-wider flex items-center gap-2">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="shield" aria-hidden="true" class="lucide lucide-shield w-4 h-4 text-tactical-gold"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"></path></svg>
+                <span>JSOC // ODA 3211</span>
+            </div>
+            <div class="h-4 w-px bg-tactical-border"></div>
+            <h1 class="font-oswald text-lg font-bold text-white uppercase tracking-wide flex items-center gap-2">
+                <span>OPERATION SABLE TRIDENT</span>
+                <span class="text-tactical-gold font-normal">|</span>
+                <span class="text-tactical-amber font-mono text-xs md:text-sm">EYL, SOMALIA CAMPAIGN</span>
+            </h1>
+        </div>
+
+        <!-- Global Action Toolbar -->
+        <div class="flex items-center space-x-2 font-mono text-xs">
+            <div id="editStatusBadge" class="hidden items-center space-x-1.5 bg-tactical-amber/20 text-tactical-amber px-2.5 py-1 rounded border border-tactical-amber animate-pulse">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="edit-3" aria-hidden="true" class="lucide lucide-edit-3 w-3.5 h-3.5"><path d="M13 21h8"></path><path d="M21.174 6.812a1 1 0 0 0-3.986-3.987L3.842 16.174a2 2 0 0 0-.5.83l-1.321 4.352a.5.5 0 0 0 .623.622l4.353-1.32a2 2 0 0 0 .83-.497z"></path></svg>
+                <span class="font-bold">EDIT MODE ACTIVE</span>
+            </div>
+
+            <button id="toggleEditBtn" class="px-3 py-1.5 rounded bg-tactical-panel hover:bg-tactical-border border border-tactical-border text-tactical-gold transition flex items-center gap-1.5">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="edit-3" aria-hidden="true" class="lucide lucide-edit-3 w-4 h-4"><path d="M13 21h8"></path><path d="M21.174 6.812a1 1 0 0 0-3.986-3.987L3.842 16.174a2 2 0 0 0-.5.83l-1.321 4.352a.5.5 0 0 0 .623.622l4.353-1.32a2 2 0 0 0 .83-.497z"></path></svg>
+                <span id="editBtnText">Edit Text</span>
+            </button>
+
+            <button id="addSlideBtn" class="px-3 py-1.5 rounded bg-tactical-panel hover:bg-tactical-border border border-tactical-border text-tactical-amber transition flex items-center gap-1.5">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="plus-circle" aria-hidden="true" class="lucide lucide-plus-circle w-4 h-4"><circle cx="12" cy="12" r="10"></circle><path d="M8 12h8"></path><path d="M12 8v8"></path></svg>
+                <span>Add Section / Slide</span>
+            </button>
+
+            <button id="exportHtmlBtn" class="px-3 py-1.5 rounded bg-tactical-olive/40 hover:bg-tactical-olive border border-tactical-olive text-tactical-gold transition flex items-center gap-1.5">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="download" aria-hidden="true" class="lucide lucide-download w-4 h-4"><path d="M12 15V3"></path><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><path d="m7 10 5 5 5-5"></path></svg>
+                <span>Export OPORD Suite</span>
+            </button>
+        </div>
+    </header>
+
+    <!-- MISSION SELECTION TABS -->
+    <nav class="bg-tactical-panel border-b border-tactical-border px-4 md:px-6 py-2 z-20 flex overflow-x-auto space-x-2 font-mono text-xs">
+        <button class="mission-tab px-3 py-2 rounded border border-tactical-gold text-tactical-gold bg-tactical-card font-bold flex items-center gap-2 whitespace-nowrap shadow-md" data-mission="1">
+            <span class="font-bold text-tactical-amber">M1</span>
+            <span>GHOST SHADOW (SR)</span>
+        </button>
+        <button class="mission-tab px-3 py-2 rounded border border-tactical-border text-tactical-muted hover:text-white bg-tactical-card flex items-center gap-2 whitespace-nowrap" data-mission="2">
+            <span class="font-bold text-tactical-amber">M2</span>
+            <span>BROKEN LINK (DA)</span>
+        </button>
+        <button class="mission-tab px-3 py-2 rounded border border-tactical-border text-tactical-muted hover:text-white bg-tactical-card flex items-center gap-2 whitespace-nowrap" data-mission="3">
+            <span class="font-bold text-tactical-amber">M3</span>
+            <span>HAMMER FORGE (AMBUSH)</span>
+        </button>
+        <button class="mission-tab px-3 py-2 rounded border border-tactical-border text-tactical-muted hover:text-white bg-tactical-card flex items-center gap-2 whitespace-nowrap" data-mission="4">
+            <span class="font-bold text-tactical-amber">M4</span>
+            <span>BLACKOUT (CSAR)</span>
+        </button>
+        <button class="mission-tab px-3 py-2 rounded border border-tactical-border text-tactical-muted hover:text-white bg-tactical-card flex items-center gap-2 whitespace-nowrap" data-mission="5">
+            <span class="font-bold text-tactical-amber">M5</span>
+            <span>IRON CLAD (STRIKE)</span>
+        </button>
+    </nav>
+
+    <!-- OPORD VIEWPORT CONTAINER -->
+    <main class="flex-1 p-4 md:p-8 max-w-6xl mx-auto w-full">
+        
+        <!-- OPORD CONTENT CARD -->
+        <article id="opordContainer" class="bg-tactical-card border border-tactical-border rounded-lg shadow-2xl p-6 md:p-10 font-mono relative">
+                        <div class="border-b border-tactical-border pb-4 mb-6 flex justify-between items-start flex-wrap gap-2">
+                            <div>
+                                <span class="text-tactical-gold font-bold uppercase block text-xs">OPERATION ORDER 01-26</span>
+                                <h2 class="font-oswald text-2xl md:text-3xl text-white font-bold uppercase mt-1">GHOST SHADOW (SPECIAL RECONNAISSANCE)</h2>
+                                <p class="text-tactical-amber text-xs mt-1">TASK FORCE: ODA 3211 ("Viper") | AO: Eyl Fishing Port &amp; Docks</p>
+                            </div>
+                            <span class="text-xs bg-tactical-olive/30 border border-tactical-olive text-tactical-gold px-2.5 py-1 rounded">PHASE: SR / SSE</span>
+                        </div>
+
+                        <section class="space-y-6 text-xs md:text-sm leading-relaxed text-gray-200">
+                            <div>
+                                <h3 class="font-montserrat font-bold text-tactical-gold uppercase text-base mb-2 border-b border-tactical-border pb-1">1. SITUATION</h3>
+                                <p class="mb-2"><strong class="text-white">a. Enemy Forces:</strong> Volk Group (Russian PMC) holds the inner dock compound at Obj BARNACLE (Grid 042 087). Equipped with thermal scopes, Gen 3+ NVGs, suppressed weapons, and scheduled 10-min check-ins. Jabhat al-Somal (JAS) militia controls outer beach roads with armed technicals (DShK/PKM).</p>
+                                <p class="mb-2"><strong class="text-white">b. Friendly Forces:</strong> ODA 3211 staged at FOB Nomad (Eyl Airfield). Overhead ISR: Raven 1-1 (MQ-9 Reaper). Waterborne transport: Trident 1 (US Navy NSW 2x CRRC Zodiacs).</p>
+                                <p><strong class="text-white">c. Terrain &amp; Weather:</strong> Coastal inlet harbor, elevated plateau cliffs, dry wadi washbeds. 0200Z insertion, &lt;15% moon illumination. Heavy sea surf provides acoustic masking along the shoreline.</p>
+                            </div>
+
+                            <div>
+                                <h3 class="font-montserrat font-bold text-tactical-gold uppercase text-base mb-2 border-b border-tactical-border pb-1">2. MISSION</h3>
+                                <p class="bg-tactical-panel p-3 rounded border border-tactical-border text-tactical-amber">
+                                    ODA 3211 ("Viper") infiltrates Objective BARNACLE (Grid 042 087) via Zodiac CRRC under cover of darkness NLT 0200Z to conduct Special Reconnaissance (SR), attach micro-GPS tracking beacons to 2x PMC Kamaz cargo trucks, execute camera-based SSE on shipping manifests, and exfiltrate undetected.
+                                </p>
+                            </div>
+
+                            <div>
+                                <h3 class="font-montserrat font-bold text-tactical-gold uppercase text-base mb-2 border-b border-tactical-border pb-1">3. EXECUTION</h3>
+                                <p class="mb-2"><strong class="text-white">a. Commander's Intent:</strong> Map Volk Group's C2 network and trace advanced missile shipments without triggering regional militia mobilization.</p>
+                                <ul class="list-disc list-inside space-y-1 text-tactical-muted pl-2">
+                                    <li><strong class="text-white">Phase I (Infiltration):</strong> Launch Zodiacs from Eyl Airfield beach. Land at IP SHARK (Grid 048 081). Cache boats in rock cove; move via wadi wash to ORP COBRA (Grid 044 084).</li>
+                                    <li><strong class="text-white">Phase II (S&amp;O Recon):</strong> Viper 1-1/1-2 establish overwatch at Eyl cliff ridge (Grid 041 085) overseeing Obj BARNACLE. Sync with Raven 1-1 thermal feed.</li>
+                                    <li><strong class="text-white">Phase III (Actions on Objective):</strong> Viper 1-3/1-4 breach harbor sea wall. Attach micro-GPS beacons to 2x Kamaz trucks in maintenance bay. Perform camera SSE on shipping logs and ATGM optics crates inside dock office.</li>
+                                    <li><strong class="text-white">Phase IV (Exfiltration):</strong> Collapse to ORP COBRA; egress via CRRC at EP DOLPHIN (Grid 048 081). Emergency Alt: HLZ WHISKEY (Eyl Plateau Dunes - Grid 038 080) via MH-6 Little Bird (Pony Express).</li>
+                                </ul>
+                                <div class="mt-3 bg-tactical-red/20 border border-tactical-red p-2.5 rounded text-tactical-red text-xs">
+                                    <strong>CRITICAL ROE: STRICT WEAPONS HOLD.</strong> Engagement authorized ONLY in defense of life under unpreventable compromise. Suppressed weapons and subsonic rounds only.
+                                </div>
+                            </div>
+
+                            <div>
+                                <h3 class="font-montserrat font-bold text-tactical-gold uppercase text-base mb-2 border-b border-tactical-border pb-1">4. SERVICE SUPPORT</h3>
+                                <p><strong class="text-white">a. Equipment:</strong> Subdued maritime loadouts, thermal-masking ponchos, suppressed rifles, 2x micro-GPS beacons, SLR IR camera, cyber SSE extractor kit.</p>
+                                <p><strong class="text-white">b. Medical:</strong> Self/Buddy Aid (2x IFAKs/man). Emergency CASEVAC via Pony Express on 10-min strip alert upon declaration of "FLASH - TROOPS IN CONTACT".</p>
+                            </div>
+
+                            <div>
+                                <h3 class="font-montserrat font-bold text-tactical-gold uppercase text-base mb-2 border-b border-tactical-border pb-1">5. COMMAND AND SIGNAL</h3>
+                                <div class="overflow-x-auto">
+                                    <table class="w-full text-left font-mono text-xs border border-tactical-border">
+                                        <tbody><tr class="bg-tactical-panel text-tactical-gold"><th class="p-2">NET</th><th class="p-2">FREQ</th><th class="p-2">CALL SIGN</th><th class="p-2">FUNCTION</th></tr>
+                                        <tr class="border-t border-tactical-border"><td class="p-2">Intra-Team</td><td class="p-2 text-tactical-amber">312.000 MHz</td><td class="p-2">Viper 1-1 to 1-4</td><td class="p-2 text-tactical-muted">Squad Whisper Net</td></tr>
+                                        <tr class="border-t border-tactical-border"><td class="p-2">ISR / Air</td><td class="p-2 text-tactical-amber">142.250 MHz</td><td class="p-2">Raven 1-1</td><td class="p-2 text-tactical-muted">MQ-9 Thermal Feed</td></tr>
+                                        <tr class="border-t border-tactical-border"><td class="p-2">Maritime</td><td class="p-2 text-tactical-amber">156.800 MHz</td><td class="p-2">Trident 1</td><td class="p-2 text-tactical-muted">CRRC Transport Control</td></tr>
+                                    </tbody></table>
+                                </div>
+                                <p class="mt-2 text-xs text-tactical-muted"><strong class="text-white">Code Words:</strong> "GHOST" (Objectives Complete) | "SHADOW" (Trackers Set) | "BROKEN GLASS" (Compromised - ROE Lifted)</p>
+                            </div>
+                        </section>
+                    </article>
+
+    </main>
+
+    <!-- NEW SLIDE / SECTION MODAL -->
+    <div id="addSlideModal" class="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 hidden flex items-center justify-center p-4">
+        <div class="bg-tactical-card border border-tactical-border max-w-lg w-full rounded-lg p-6 shadow-2xl font-mono text-xs">
+            <div class="flex justify-between items-center mb-4 pb-2 border-b border-tactical-border">
+                <h3 class="font-oswald text-lg text-tactical-gold uppercase font-bold flex items-center gap-2">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="plus-circle" aria-hidden="true" class="lucide lucide-plus-circle w-5 h-5"><circle cx="12" cy="12" r="10"></circle><path d="M8 12h8"></path><path d="M12 8v8"></path></svg>
+                    <span>Add Custom Section / Slide</span>
+                </h3>
+                <button id="closeModalBtn" class="text-tactical-muted hover:text-white">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="x" aria-hidden="true" class="lucide lucide-x w-5 h-5"><path d="M18 6 6 18"></path><path d="m6 6 12 12"></path></svg>
+                </button>
+            </div>
+
+            <div class="space-y-4">
+                <div>
+                    <label class="block text-tactical-muted mb-1 uppercase">Section Title / Header</label>
+                    <input type="text" id="newSlideTitle" placeholder="e.g. 3.d. CIVIL AFFAIRS &amp; COLLATERAL MITIGATION" class="w-full bg-tactical-panel border border-tactical-border rounded p-2 text-white focus:border-tactical-gold outline-none">
+                </div>
+                <div>
+                    <label class="block text-tactical-muted mb-1 uppercase">Section Content / Operational Directive</label>
+                    <textarea id="newSlideContent" rows="5" placeholder="Enter key tasks, grid references, or execution details..." class="w-full bg-tactical-panel border border-tactical-border rounded p-2 text-white focus:border-tactical-gold outline-none"></textarea>
+                </div>
+                <button id="submitNewSlideBtn" class="w-full py-2.5 bg-tactical-gold text-slate-950 font-bold rounded uppercase hover:bg-tactical-amber transition">
+                    Append Section to Active OPORD
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- SCRIPT DATA & ENGINE -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            lucide.createIcons();
+
+            let activeMission = 1;
+            let isEditMode = false;
+
+            const opordData = {
+                1: {
+                    title: "MISSION 1: GHOST SHADOW (SPECIAL RECONNAISSANCE & SSE)",
+                    grid: "GRID 042 087 (EYL FISHING PORT)",
+                    time: "0200Z (NIGHT INSERTION)",
+                    classification: "SECRET // NOFORN // JSOC FOB NOMAD",
+                    content: `
+                        <div class="border-b border-tactical-border pb-4 mb-6 flex justify-between items-start flex-wrap gap-2">
+                            <div>
+                                <span class="text-tactical-gold font-bold uppercase block text-xs">OPERATION ORDER 01-26</span>
+                                <h2 class="font-oswald text-2xl md:text-3xl text-white font-bold uppercase mt-1">GHOST SHADOW (SPECIAL RECONNAISSANCE)</h2>
+                                <p class="text-tactical-amber text-xs mt-1">TASK FORCE: ODA 3211 ("Viper") | AO: Eyl Fishing Port & Docks</p>
+                            </div>
+                            <span class="text-xs bg-tactical-olive/30 border border-tactical-olive text-tactical-gold px-2.5 py-1 rounded">PHASE: SR / SSE</span>
+                        </div>
+
+                        <section class="space-y-6 text-xs md:text-sm leading-relaxed text-gray-200">
+                            <div>
+                                <h3 class="font-montserrat font-bold text-tactical-gold uppercase text-base mb-2 border-b border-tactical-border pb-1">1. SITUATION</h3>
+                                <p class="mb-2"><strong class="text-white">a. Enemy Forces:</strong> Volk Group (Russian PMC) holds the inner dock compound at Obj BARNACLE (Grid 042 087). Equipped with thermal scopes, Gen 3+ NVGs, suppressed weapons, and scheduled 10-min check-ins. Jabhat al-Somal (JAS) militia controls outer beach roads with armed technicals (DShK/PKM).</p>
+                                <p class="mb-2"><strong class="text-white">b. Friendly Forces:</strong> ODA 3211 staged at FOB Nomad (Eyl Airfield). Overhead ISR: Raven 1-1 (MQ-9 Reaper). Waterborne transport: Trident 1 (US Navy NSW 2x CRRC Zodiacs).</p>
+                                <p><strong class="text-white">c. Terrain & Weather:</strong> Coastal inlet harbor, elevated plateau cliffs, dry wadi washbeds. 0200Z insertion, <15% moon illumination. Heavy sea surf provides acoustic masking along the shoreline.</p>
+                            </div>
+
+                            <div>
+                                <h3 class="font-montserrat font-bold text-tactical-gold uppercase text-base mb-2 border-b border-tactical-border pb-1">2. MISSION</h3>
+                                <p class="bg-tactical-panel p-3 rounded border border-tactical-border text-tactical-amber">
+                                    ODA 3211 ("Viper") infiltrates Objective BARNACLE (Grid 042 087) via Zodiac CRRC under cover of darkness NLT 0200Z to conduct Special Reconnaissance (SR), attach micro-GPS tracking beacons to 2x PMC Kamaz cargo trucks, execute camera-based SSE on shipping manifests, and exfiltrate undetected.
+                                </p>
+                            </div>
+
+                            <div>
+                                <h3 class="font-montserrat font-bold text-tactical-gold uppercase text-base mb-2 border-b border-tactical-border pb-1">3. EXECUTION</h3>
+                                <p class="mb-2"><strong class="text-white">a. Commander's Intent:</strong> Map Volk Group's C2 network and trace advanced missile shipments without triggering regional militia mobilization.</p>
+                                <ul class="list-disc list-inside space-y-1 text-tactical-muted pl-2">
+                                    <li><strong class="text-white">Phase I (Infiltration):</strong> Launch Zodiacs from Eyl Airfield beach. Land at IP SHARK (Grid 048 081). Cache boats in rock cove; move via wadi wash to ORP COBRA (Grid 044 084).</li>
+                                    <li><strong class="text-white">Phase II (S&O Recon):</strong> Viper 1-1/1-2 establish overwatch at Eyl cliff ridge (Grid 041 085) overseeing Obj BARNACLE. Sync with Raven 1-1 thermal feed.</li>
+                                    <li><strong class="text-white">Phase III (Actions on Objective):</strong> Viper 1-3/1-4 breach harbor sea wall. Attach micro-GPS beacons to 2x Kamaz trucks in maintenance bay. Perform camera SSE on shipping logs and ATGM optics crates inside dock office.</li>
+                                    <li><strong class="text-white">Phase IV (Exfiltration):</strong> Collapse to ORP COBRA; egress via CRRC at EP DOLPHIN (Grid 048 081). Emergency Alt: HLZ WHISKEY (Eyl Plateau Dunes - Grid 038 080) via MH-6 Little Bird (Pony Express).</li>
+                                </ul>
+                                <div class="mt-3 bg-tactical-red/20 border border-tactical-red p-2.5 rounded text-tactical-red text-xs">
+                                    <strong>CRITICAL ROE: STRICT WEAPONS HOLD.</strong> Engagement authorized ONLY in defense of life under unpreventable compromise. Suppressed weapons and subsonic rounds only.
+                                </div>
+                            </div>
+
+                            <div>
+                                <h3 class="font-montserrat font-bold text-tactical-gold uppercase text-base mb-2 border-b border-tactical-border pb-1">4. SERVICE SUPPORT</h3>
+                                <p><strong class="text-white">a. Equipment:</strong> Subdued maritime loadouts, thermal-masking ponchos, suppressed rifles, 2x micro-GPS beacons, SLR IR camera, cyber SSE extractor kit.</p>
+                                <p><strong class="text-white">b. Medical:</strong> Self/Buddy Aid (2x IFAKs/man). Emergency CASEVAC via Pony Express on 10-min strip alert upon declaration of "FLASH - TROOPS IN CONTACT".</p>
+                            </div>
+
+                            <div>
+                                <h3 class="font-montserrat font-bold text-tactical-gold uppercase text-base mb-2 border-b border-tactical-border pb-1">5. COMMAND AND SIGNAL</h3>
+                                <div class="overflow-x-auto">
+                                    <table class="w-full text-left font-mono text-xs border border-tactical-border">
+                                        <tr class="bg-tactical-panel text-tactical-gold"><th class="p-2">NET</th><th class="p-2">FREQ</th><th class="p-2">CALL SIGN</th><th class="p-2">FUNCTION</th></tr>
+                                        <tr class="border-t border-tactical-border"><td class="p-2">Intra-Team</td><td class="p-2 text-tactical-amber">312.000 MHz</td><td class="p-2">Viper 1-1 to 1-4</td><td class="p-2 text-tactical-muted">Squad Whisper Net</td></tr>
+                                        <tr class="border-t border-tactical-border"><td class="p-2">ISR / Air</td><td class="p-2 text-tactical-amber">142.250 MHz</td><td class="p-2">Raven 1-1</td><td class="p-2 text-tactical-muted">MQ-9 Thermal Feed</td></tr>
+                                        <tr class="border-t border-tactical-border"><td class="p-2">Maritime</td><td class="p-2 text-tactical-amber">156.800 MHz</td><td class="p-2">Trident 1</td><td class="p-2 text-tactical-muted">CRRC Transport Control</td></tr>
+                                    </table>
+                                </div>
+                                <p class="mt-2 text-xs text-tactical-muted"><strong class="text-white">Code Words:</strong> "GHOST" (Objectives Complete) | "SHADOW" (Trackers Set) | "BROKEN GLASS" (Compromised - ROE Lifted)</p>
+                            </div>
+                        </section>
+                    `
+                },
+                2: {
+                    title: "MISSION 2: BROKEN LINK (DIRECT ACTION & HVT CAPTURE)",
+                    grid: "GRID 035 072 (OLD DAABAD FORT RUINS)",
+                    time: "1300Z (DAYLIGHT ASSAULT)",
+                    classification: "SECRET // NOFORN // JSOC FOB NOMAD",
+                    content: `
+                        <div class="border-b border-tactical-border pb-4 mb-6 flex justify-between items-start flex-wrap gap-2">
+                            <div>
+                                <span class="text-tactical-gold font-bold uppercase block text-xs">OPERATION ORDER 02-26</span>
+                                <h2 class="font-oswald text-2xl md:text-3xl text-white font-bold uppercase mt-1">BROKEN LINK (DIRECT ACTION / HVT)</h2>
+                                <p class="text-tactical-amber text-xs mt-1">TASK FORCE: ODA 3211 ("Viper") | AO: Old Daabad Fort Ruins (Eyl Plateau)</p>
+                            </div>
+                            <span class="text-xs bg-tactical-amber/30 border border-tactical-amber text-tactical-amber px-2.5 py-1 rounded">PHASE: DIRECT ACTION</span>
+                        </div>
+
+                        <section class="space-y-6 text-xs md:text-sm leading-relaxed text-gray-200">
+                            <div>
+                                <h3 class="font-montserrat font-bold text-tactical-gold uppercase text-base mb-2 border-b border-tactical-border pb-1">1. SITUATION</h3>
+                                <p class="mb-2"><strong class="text-white">a. Enemy Forces:</strong> Senior JAS Quartermaster Abdi 'Terror' meeting with Volk Group chief logistics broker inside Old Daabad Fort (Grid 035 072). Fort defended by 15-20 Volk contractors with fixed PKMs and 30+ JAS militia in courtyards.</p>
+                                <p class="mb-2"><strong class="text-white">b. Friendly Forces:</strong> ODA 3211 in 2x Ground Mobility Vehicles (GMVs). Overhead CAS/ISR: AH-6 Little Bird (Raven 1-2) and MQ-9 Reaper.</p>
+                                <p><strong class="text-white">c. Environment:</strong> High rocky plateau, blinding mid-day sun, extreme dust visibility, steep narrow switchback roads.</p>
+                            </div>
+
+                            <div>
+                                <h3 class="font-montserrat font-bold text-tactical-gold uppercase text-base mb-2 border-b border-tactical-border pb-1">2. MISSION</h3>
+                                <p class="bg-tactical-panel p-3 rounded border border-tactical-border text-tactical-amber">
+                                    ODA 3211 conducts Direct Action assault on Objective VIPER (Old Daabad Fort - Grid 035 072) NLT 1300Z to CAPTURE or NEUTRALIZE JAS Quartermaster Abdi 'Terror', secure hard drives/sat-phones, and exfiltrate under fire.
+                                </p>
+                            </div>
+
+                            <div>
+                                <h3 class="font-montserrat font-bold text-tactical-gold uppercase text-base mb-2 border-b border-tactical-border pb-1">3. EXECUTION</h3>
+                                <p class="mb-2"><strong class="text-white">a. Commander's Intent:</strong> Rapid mechanical breach, aggressive room clearing, high-speed target extraction before militia technicals mass on the plateau switchbacks.</p>
+                                <ul class="list-disc list-inside space-y-1 text-tactical-muted pl-2">
+                                    <li><strong class="text-white">Phase I (Infiltration):</strong> Move GMVs along dry riverbed; dismount at Staging Area 600m below fort cliffs.</li>
+                                    <li><strong class="text-white">Phase II (Actions on Obj):</strong> Explosive breach of stone gatehouse. Secure cellar command node. Capture Abdi 'Terror' / extract encrypted hard drives.</li>
+                                    <li><strong class="text-white">Phase III (TIC Response):</strong> JAS technicals rush up plateau switchbacks. Mark enemy vehicles for AH-6 / MQ-9 laser strikes.</li>
+                                    <li><strong class="text-white">Phase IV (Exfiltration):</strong> Fighting disengagement down western rock wash to GMVs; motorcade extraction via MSR Gold back to FOB Nomad.</li>
+                                </ul>
+                            </div>
+
+                            <div>
+                                <h3 class="font-montserrat font-bold text-tactical-gold uppercase text-base mb-2 border-b border-tactical-border pb-1">4. SERVICE SUPPORT</h3>
+                                <p><strong class="text-white">a. Loadout:</strong> Heavy assault gear, breach charges, 40mm HEDP, M240B gun trucks, flex-cuffs, SSE media extraction drives.</p>
+                                <p><strong class="text-white">b. Medical:</strong> Casualty Collection Point (CCP) at GMV Rally Point. MEDEVAC: Dustoff 12 on 5-min strip alert.</p>
+                            </div>
+
+                            <div>
+                                <h3 class="font-montserrat font-bold text-tactical-gold uppercase text-base mb-2 border-b border-tactical-border pb-1">5. COMMAND AND SIGNAL</h3>
+                                <p><strong class="text-white">Signal:</strong> Team Intra-Net: 312.000 MHz | CAS/JTAC Net: 121.500 MHz (Raven 1-2 / Pony Express).</p>
+                                <p><strong class="text-white">Code Words:</strong> "HAMMER" (Breach Initiated) | "PACKAGE SECURED" (HVT Captured) | "HOTBOX" (Heavy Enemy Counter-Attack).</p>
+                            </div>
+                        </section>
+                    `
+                },
+                3: {
+                    title: "MISSION 3: HAMMER FORGE (INTERDICTION & CONVOY AMBUSH)",
+                    grid: "GRID 018 064 (NUGAAL WADI CANYON)",
+                    time: "1730Z (DUSK AMBUSH)",
+                    classification: "SECRET // NOFORN // JSOC FOB NOMAD",
+                    content: `
+                        <div class="border-b border-tactical-border pb-4 mb-6 flex justify-between items-start flex-wrap gap-2">
+                            <div>
+                                <span class="text-tactical-gold font-bold uppercase block text-xs">OPERATION ORDER 03-26</span>
+                                <h2 class="font-oswald text-2xl md:text-3xl text-white font-bold uppercase mt-1">HAMMER FORGE (CONVOY AMBUSH & DEMO)</h2>
+                                <p class="text-tactical-amber text-xs mt-1">TASK FORCE: ODA 3211 ("Viper") | AO: Nugaal Wadi Canyon Bottleneck</p>
+                            </div>
+                            <span class="text-xs bg-tactical-gold/30 border border-tactical-gold text-tactical-gold px-2.5 py-1 rounded">PHASE: INTERDICTION</span>
+                        </div>
+
+                        <section class="space-y-6 text-xs md:text-sm leading-relaxed text-gray-200">
+                            <div>
+                                <h3 class="font-montserrat font-bold text-tactical-gold uppercase text-base mb-2 border-b border-tactical-border pb-1">1. SITUATION</h3>
+                                <p class="mb-2"><strong class="text-white">a. Enemy Forces:</strong> Volk Group mobile air-defense convoy (1x BRDM-2 lead scout car, 2x PMC technicals, 1x Kamaz heavy truck with Igla-S MANPADS & Kornet launchers) evacuating west through Nugaal Wadi (Grid 018 064).</p>
+                                <p class="mb-2"><strong class="text-white">b. Friendly Forces:</strong> ODA 3211 equipped with anti-armor weapons (Javelin/AT4), Claymore mines, and M240B machine guns.</p>
+                                <p><strong class="text-white">c. Environment:</strong> Narrow, steep-walled desert canyon corridor 5km west of Eyl. Transitioning from golden hour into total dark.</p>
+                            </div>
+
+                            <div>
+                                <h3 class="font-montserrat font-bold text-tactical-gold uppercase text-base mb-2 border-b border-tactical-border pb-1">2. MISSION</h3>
+                                <p class="bg-tactical-panel p-3 rounded border border-tactical-border text-tactical-amber">
+                                    ODA 3211 establishes an ambush at Nugaal Wadi Chokepoint (Grid 018 064) NLT 1730Z to DESTROY PMC escort vehicles, SECURE the weapons cargo truck, RIG advanced air-defense systems with demolition charges, and exfiltrate on foot.
+                                </p>
+                            </div>
+
+                            <div>
+                                <h3 class="font-montserrat font-bold text-tactical-gold uppercase text-base mb-2 border-b border-tactical-border pb-1">3. EXECUTION</h3>
+                                <p class="mb-2"><strong class="text-white">a. Commander's Intent:</strong> Disable lead vehicle in killzone, destroy escorts, destroy missile crates via C4 before PMC 82mm mortar counter-fires hit the canyon rims.</p>
+                                <ul class="list-disc list-inside space-y-1 text-tactical-muted pl-2">
+                                    <li><strong class="text-white">Phase I (Preparation):</strong> Pre-position GMVs in concealment 800m rear. Site Claymores, anti-vehicle mines, and overlapping fire sectors along wadi walls.</li>
+                                    <li><strong class="text-white">Phase II (Spring Trap):</strong> Initiate with command-detonated mine on lead BRDM-2. Suppress killzone with Javelins & M240Bs.</li>
+                                    <li><strong class="text-white">Phase III (Actions on Cargo):</strong> Viper 1-4 bounds into killzone; attaches C4 charges with 3-minute delayed timers to Igla-S / Kornet crates.</li>
+                                    <li><strong class="text-white">Phase IV (Exfiltration):</strong> PMC contractors lay down mortar fire and thermal smoke. Break contact through rock crevices to Night PZ EAGLE (Grid 012 060) for low-level blackout extraction via 2x MH-60 Blackhawks.</li>
+                                </ul>
+                            </div>
+
+                            <div>
+                                <h3 class="font-montserrat font-bold text-tactical-gold uppercase text-base mb-2 border-b border-tactical-border pb-1">4. SERVICE SUPPORT</h3>
+                                <p><strong class="text-white">a. Loadout:</strong> 2x Javelin CLUs, 4x AT4s, 6x Claymores, M240B ammo cans, C4 block demo charges with igniters.</p>
+                                <p><strong class="text-white">b. Medical:</strong> TCCC self/buddy aid. Extraction bird (Pony Express 2) equipped with onboard SOAR medic.</p>
+                            </div>
+
+                            <div>
+                                <h3 class="font-montserrat font-bold text-tactical-gold uppercase text-base mb-2 border-b border-tactical-border pb-1">5. COMMAND AND SIGNAL</h3>
+                                <p><strong class="text-white">Signal:</strong> Intra-Team: 312.000 MHz | Air Extraction Net: 156.800 MHz (Pony Express).</p>
+                                <p><strong class="text-white">Code Words:</strong> "THUNDER" (Trap Sprung) | "FIREWORKS" (C4 Detonated) | "EAGLE LANDED" (Extraction Inbound).</p>
+                            </div>
+                        </section>
+                    `
+                },
+                4: {
+                    title: "MISSION 4: BLACKOUT (CSAR & TCCC HIGH-RISK RECOVERY)",
+                    grid: "GRID 051 093 (EYL COASTAL MARSHES)",
+                    time: "0300Z (STORMY NIGHT RECOVERY)",
+                    classification: "SECRET // NOFORN // JSOC FOB NOMAD",
+                    content: `
+                        <div class="border-b border-tactical-border pb-4 mb-6 flex justify-between items-start flex-wrap gap-2">
+                            <div>
+                                <span class="text-tactical-gold font-bold uppercase block text-xs">OPERATION ORDER 04-26</span>
+                                <h2 class="font-oswald text-2xl md:text-3xl text-white font-bold uppercase mt-1">BLACKOUT (COMBAT SEARCH & RESCUE)</h2>
+                                <p class="text-tactical-amber text-xs mt-1">TASK FORCE: ODA 3211 ("Viper") | AO: Flooded Mudbrick Compound (Eyl Tidal Flats)</p>
+                            </div>
+                            <span class="text-xs bg-tactical-red/30 border border-tactical-red text-tactical-red px-2.5 py-1 rounded">PHASE: HIGH-RISK CSAR</span>
+                        </div>
+
+                        <section class="space-y-6 text-xs md:text-sm leading-relaxed text-gray-200">
+                            <div>
+                                <h3 class="font-montserrat font-bold text-tactical-gold uppercase text-base mb-2 border-b border-tactical-border pb-1">1. SITUATION</h3>
+                                <p class="mb-2"><strong class="text-white">a. Enemy Forces:</strong> Converging Volk Group & JAS militia squads searching tidal marshes with technicals. Compound perimeter rigged with tripwires/IEDs.</p>
+                                <p class="mb-2"><strong class="text-white">b. Friendly Forces:</strong> 2x USAF JTACs (downed Reaper BDA team) trapped in mudbrick basement (Grid 051 093). One survivor has severe femoral arterial bleed.</p>
+                                <p><strong class="text-white">c. Environment:</strong> Torrential coastal gale storm, zero visibility, rising tide waters, mud flats restricting wheeled vehicles.</p>
+                            </div>
+
+                            <div>
+                                <h3 class="font-montserrat font-bold text-tactical-gold uppercase text-base mb-2 border-b border-tactical-border pb-1">2. MISSION</h3>
+                                <p class="bg-tactical-panel p-3 rounded border border-tactical-border text-tactical-amber">
+                                    ODA 3211 conducts Combat Search and Rescue (CSAR) at Grid 051 093 NLT 0300Z to RECOVER 2x isolated JTAC personnel, STABILIZE life-threatening arterial injuries via TCCC, DEFEND the stronghold against converging threat elements, and EXFILTRATE via hot hoist/land extraction.
+                                </p>
+                            </div>
+
+                            <div>
+                                <h3 class="font-montserrat font-bold text-tactical-gold uppercase text-base mb-2 border-b border-tactical-border pb-1">3. EXECUTION</h3>
+                                <p class="mb-2"><strong class="text-white">a. Commander's Intent:</strong> Infiltrate on foot through mud flats, breach compound, apply tourniquets/chest seals, hold perimeter for 8 minutes during storm, execute CASEVAC.</p>
+                                <ul class="list-disc list-inside space-y-1 text-tactical-muted pl-2">
+                                    <li><strong class="text-white">Phase I (Infiltration):</strong> Helicopters grounded by storm. Dismount 1.5km out; navigate pitch-black mud flats using NVGs & GPS.</li>
+                                    <li><strong class="text-white">Phase II (Clear & Stabilize):</strong> Disarm perimeter tripwires. Clear mudbrick compound. Apply arterial tourniquet & chest seals to critically wounded JTAC.</li>
+                                    <li><strong class="text-white">Phase III (Siege Defense):</strong> Enemy technicals surround compound. Establish 360-degree security; repel assault teams for 8 minutes.</li>
+                                    <li><strong class="text-white">Phase IV (Exfiltration):</strong> Pop IR smoke on nearby sandbar LZ. MH-60 CASEVAC bird fights wind to execute hot hoist/land extraction under protective fire.</li>
+                                </ul>
+                            </div>
+
+                            <div>
+                                <h3 class="font-montserrat font-bold text-tactical-gold uppercase text-base mb-2 border-b border-tactical-border pb-1">4. SERVICE SUPPORT</h3>
+                                <p><strong class="text-white">a. Loadout:</strong> Advanced TCCC medical kits, blood plasma, litter stretchers, IR glow sticks, thermal ponchos, NVGs.</p>
+                                <p><strong class="text-white">b. Medical:</strong> 18D Special Forces Medical Sergeant leads stabilization. Dedicated CASEVAC bird on standby.</p>
+                            </div>
+
+                            <div>
+                                <h3 class="font-montserrat font-bold text-tactical-gold uppercase text-base mb-2 border-b border-tactical-border pb-1">5. COMMAND AND SIGNAL</h3>
+                                <p><strong class="text-white">Signal:</strong> Intra-Team: 312.000 MHz | CSAR Rescue Net: 121.500 MHz (Dustoff 12).</p>
+                                <p><strong class="text-white">Code Words:</strong> "SURPRISE" (JTACs Located) | "STANCHED" (Casualty Stabilized) | "MEDEVAC TOUCHDOWN" (Exfil Complete).</p>
+                            </div>
+                        </section>
+                    `
+                },
+                5: {
+                    title: "MISSION 5: IRON CLAD (COMBINED ARMS C2 DECAPITATION)",
+                    grid: "GRID 059 098 (EYL NORTH HEADLAND RADAR BASE)",
+                    time: "0500Z (DAWN BREAK STRIKE)",
+                    classification: "SECRET // NOFORN // JSOC FOB NOMAD",
+                    content: `
+                        <div class="border-b border-tactical-border pb-4 mb-6 flex justify-between items-start flex-wrap gap-2">
+                            <div>
+                                <span class="text-tactical-gold font-bold uppercase block text-xs">OPERATION ORDER 05-26</span>
+                                <h2 class="font-oswald text-2xl md:text-3xl text-white font-bold uppercase mt-1">IRON CLAD (COMBINED ARMS C2 STRIKE)</h2>
+                                <p class="text-tactical-amber text-xs mt-1">TASK FORCE: ODA 3211 ("Viper") | AO: Volk Group HQ / Radar Station (North Headland)</p>
+                            </div>
+                            <span class="text-xs bg-tactical-olive/40 border border-tactical-olive text-tactical-gold px-2.5 py-1 rounded">PHASE: DECAPITATION STRIKE</span>
+                        </div>
+
+                        <section class="space-y-6 text-xs md:text-sm leading-relaxed text-gray-200">
+                            <div>
+                                <h3 class="font-montserrat font-bold text-tactical-gold uppercase text-base mb-2 border-b border-tactical-border pb-1">1. SITUATION</h3>
+                                <p class="mb-2"><strong class="text-white">a. Enemy Forces:</strong> Primary Volk Group C2 node on Eyl North Headland (Grid 059 098). Reinforced with heavy DShK nests, radar tower snipers, minefield perimeters, and PMC Commander 'Veles'. Reserve BTR-80 armored vehicle hidden in cliff cave garage.</p>
+                                <p class="mb-2"><strong class="text-white">b. Friendly Forces:</strong> ODA 3211 assault element, 81mm mortar section at FOB Nomad, AH-6 Little Bird CAS (Raven 1-2), CH-47 Heavy Lift Exfil.</p>
+                                <p><strong class="text-white">c. Environment:</strong> High coastal headland cliffs overlooking the Indian Ocean, dawn break illumination, open radar pad.</p>
+                            </div>
+
+                            <div>
+                                <h3 class="font-montserrat font-bold text-tactical-gold uppercase text-base mb-2 border-b border-tactical-border pb-1">2. MISSION</h3>
+                                <p class="bg-tactical-panel p-3 rounded border border-tactical-border text-tactical-amber">
+                                    ODA 3211 conducts Combined Arms assault on Volk Group HQ (Grid 059 098) at 0500Z to BREACH perimeter defenses, ELIMINATE or CAPTURE PMC Commander 'Veles', SECURE main digital servers, NEUTRALIZE BTR-80 armored counter-attack, and exfiltrate via CH-47.
+                                </p>
+                            </div>
+
+                            <div>
+                                <h3 class="font-montserrat font-bold text-tactical-gold uppercase text-base mb-2 border-b border-tactical-border pb-1">3. EXECUTION</h3>
+                                <p class="mb-2"><strong class="text-white">a. Commander's Intent:</strong> Suppress perimeter with mortars/AH-6, breach minefield, clear multi-story bunker, eliminate 'Veles' before dock boat escape, destroy BTR counter-attack with captured Kornets or laser-guided CAS.</p>
+                                <ul class="list-disc list-inside space-y-1 text-tactical-muted pl-2">
+                                    <li><strong class="text-white">Phase I (Combined Assault):</strong> FOB Nomad mortars drop HE/smoke on outer wire. AH-6 strafes radar tower sniper hide.</li>
+                                    <li><strong class="text-white">Phase II (Breach & Clear):</strong> Detonate APOBS/demo charges through minefield. Assault multi-story bunker & radar C2 hub.</li>
+                                    <li><strong class="text-white">Phase III (Decapitation & Intel):</strong> Intercept Commander 'Veles' on cliff staircase. Download server mainframes & operational maps.</li>
+                                    <li><strong class="text-white">Phase IV (Armored Counter-Attack & Exfil):</strong> BTR-80 emerges from mountain garage. Repel armor using captured Kornet launcher / JTAC laser strike. CH-47 extracts team directly from headland helipad.</li>
+                                </ul>
+                            </div>
+
+                            <div>
+                                <h3 class="font-montserrat font-bold text-tactical-gold uppercase text-base mb-2 border-b border-tactical-border pb-1">4. SERVICE SUPPORT</h3>
+                                <p><strong class="text-white">a. Loadout:</strong> Heavy breaching demo, C4, Javelin AT, cyber download kits, laser target designators.</p>
+                                <p><strong class="text-white">b. Medical:</strong> CCP established inside radar bunker. Emergency CH-47 lift with flight surgical team.</p>
+                            </div>
+
+                            <div>
+                                <h3 class="font-montserrat font-bold text-tactical-gold uppercase text-base mb-2 border-b border-tactical-border pb-1">5. COMMAND AND SIGNAL</h3>
+                                <p><strong class="text-white">Signal:</strong> Intra-Team: 312.000 MHz | Mortar / Indirect Net: 142.250 MHz | CAS / Air: 121.500 MHz.</p>
+                                <p><strong class="text-white">Code Words:</strong> "IRON" (Perimeter Breached) | "HEADCUT" ('Veles' Neutralized) | "VICTORY" (Headland Secured & Extracted).</p>
+                            </div>
+                        </section>
+                    `
+                }
+            };
+
+            const opordContainer = document.getElementById('opordContainer');
+            const missionTabs = document.querySelectorAll('.mission-tab');
+            const toggleEditBtn = document.getElementById('toggleEditBtn');
+            const editBtnText = document.getElementById('editBtnText');
+            const editStatusBadge = document.getElementById('editStatusBadge');
+            const addSlideBtn = document.getElementById('addSlideBtn');
+            const addSlideModal = document.getElementById('addSlideModal');
+            const closeModalBtn = document.getElementById('closeModalBtn');
+            const submitNewSlideBtn = document.getElementById('submitNewSlideBtn');
+            const exportHtmlBtn = document.getElementById('exportHtmlBtn');
+            const toast = document.getElementById('toast');
+            const toastMsg = document.getElementById('toastMsg');
+
+            function showToast(msg) {
+                toastMsg.textContent = msg;
+                toast.classList.remove('translate-x-80');
+                toast.classList.add('translate-x-0');
+                setTimeout(() => {
+                    toast.classList.remove('translate-x-0');
+                    toast.classList.add('translate-x-80');
+                }, 3000);
+            }
+
+            function renderOPORD(missionNum) {
+                activeMission = missionNum;
+                const data = opordData[missionNum];
+                if (!data) return;
+
+                opordContainer.innerHTML = data.content;
+
+                // Tab active states
+                missionTabs.forEach(tab => {
+                    const num = parseInt(tab.getAttribute('data-mission'));
+                    if (num === missionNum) {
+                        tab.className = "mission-tab px-3 py-2 rounded border border-tactical-gold text-tactical-gold bg-tactical-card font-bold flex items-center gap-2 whitespace-nowrap shadow-md";
+                    } else {
+                        tab.className = "mission-tab px-3 py-2 rounded border border-tactical-border text-tactical-muted hover:text-white bg-tactical-card flex items-center gap-2 whitespace-nowrap";
+                    }
+                });
+
+                if (isEditMode) {
+                    setEditMode(true);
+                }
+            }
+
+            function setEditMode(enabled) {
+                isEditMode = enabled;
+                document.body.classList.toggle('edit-mode', enabled);
+
+                if (enabled) {
+                    editStatusBadge.classList.remove('hidden');
+                    editStatusBadge.classList.add('flex');
+                    editBtnText.textContent = "Finish Editing";
+                    toggleEditBtn.className = "px-3 py-1.5 rounded bg-tactical-gold text-slate-950 font-bold border border-tactical-gold transition flex items-center gap-1.5";
+                } else {
+                    editStatusBadge.classList.add('hidden');
+                    editStatusBadge.classList.remove('flex');
+                    editBtnText.textContent = "Edit Text";
+                    toggleEditBtn.className = "px-3 py-1.5 rounded bg-tactical-panel hover:bg-tactical-border border border-tactical-border text-tactical-gold transition flex items-center gap-1.5";
+                }
+
+                // Make OPORD text editable
+                const targets = opordContainer.querySelectorAll('h2, h3, h4, p, li, td, th, span, div');
+                targets.forEach(el => {
+                    if (el.children.length === 0 && !el.closest('button')) {
+                        el.contentEditable = enabled;
+                    }
+                });
+
+                if (enabled) {
+                    showToast("Edit Mode Active - Click text to edit");
+                }
+            }
+
+            // Tab Click Events
+            missionTabs.forEach(tab => {
+                tab.addEventListener('click', () => {
+                    // Save active edits back to state before switching
+                    if (isEditMode) {
+                        opordData[activeMission].content = opordContainer.innerHTML;
+                    }
+                    const num = parseInt(tab.getAttribute('data-mission'));
+                    renderOPORD(num);
+                });
+            });
+
+            // Edit Mode Toggle
+            toggleEditBtn.addEventListener('click', () => {
+                if (isEditMode) {
+                    // Save innerHTML to data store
+                    opordData[activeMission].content = opordContainer.innerHTML;
+                    setEditMode(false);
+                    showToast("Edits Saved to Active OPORD");
+                } else {
+                    setEditMode(true);
+                }
+            });
+
+            // Modal Open/Close
+            addSlideBtn.addEventListener('click', () => {
+                addSlideModal.classList.remove('hidden');
+            });
+            closeModalBtn.addEventListener('click', () => {
+                addSlideModal.classList.add('hidden');
+            });
+
+            // Submit New Section / Slide
+            submitNewSlideBtn.addEventListener('click', () => {
+                const titleVal = document.getElementById('newSlideTitle').value.trim();
+                const contentVal = document.getElementById('newSlideContent').value.trim();
+
+                if (!titleVal || !contentVal) {
+                    showToast("Please fill out both section title & content");
+                    return;
+                }
+
+                const newSectionHtml = `
+                    <div class="mt-6 pt-4 border-t border-tactical-border bg-tactical-panel/40 p-4 rounded">
+                        <h3 class="font-montserrat font-bold text-tactical-gold uppercase text-base mb-2 border-b border-tactical-border pb-1">${titleVal}</h3>
+                        <p class="text-xs md:text-sm text-gray-200 leading-relaxed">${contentVal}</p>
+                    </div>
+                `;
+
+                opordContainer.insertAdjacentHTML('beforeend', newSectionHtml);
+                opordData[activeMission].content = opordContainer.innerHTML;
+
+                if (isEditMode) {
+                    setEditMode(true);
+                }
+
+                document.getElementById('newSlideTitle').value = '';
+                document.getElementById('newSlideContent').value = '';
+                addSlideModal.classList.add('hidden');
+                showToast("New Section Appended to OPORD!");
+            });
+
+            // Export HTML File Function
+            exportHtmlBtn.addEventListener('click', () => {
+                if (isEditMode) {
+                    opordData[activeMission].content = opordContainer.innerHTML;
+                    setEditMode(false);
+                }
+
+                const cloneDoc = document.documentElement.cloneNode(true);
+
+                // Clean contenteditable attributes from export clone
+                cloneDoc.querySelectorAll('[contenteditable]').forEach(el => {
+                    el.removeAttribute('contenteditable');
+                });
+                cloneDoc.querySelector('body').classList.remove('edit-mode');
+
+                const fullContent = "<!DOCTYPE html>\n" + cloneDoc.outerHTML;
+                const blob = new Blob([fullContent], { type: 'text/html' });
+                const url = URL.createObjectURL(blob);
+                const a = document.createElement('a');
+                a.href = url;
+                a.download = 'Operation_Sable_Trident_Master_OPORD_Suite.html';
+                document.body.appendChild(a);
+                a.click();
+                document.body.removeChild(a);
+                URL.revokeObjectURL(url);
+
+                showToast("Exported Full Master OPORD Suite!");
+            });
+
+            // Keyboard shortcut 'E'
+            document.addEventListener('keydown', (e) => {
+                if (document.activeElement && (document.activeElement.isContentEditable || document.activeElement.tagName === 'INPUT' || document.activeElement.tagName === 'TEXTAREA')) {
+                    return;
+                }
+                if (e.key.toLowerCase() === 'e') {
+                    toggleEditBtn.click();
+                }
+            });
+
+            // Initial Render
+            renderOPORD(1);
+        });
+    </script>
+
+</body></html>

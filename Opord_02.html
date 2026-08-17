@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OPORD 02-26 - MISSION: BROKEN LINK</title>
+    <style>
+        :root {
+            --bg-dark: #070a0f;
+            --panel-bg: rgba(15, 23, 42, 0.85);
+            --panel-border: rgba(56, 189, 248, 0.25);
+            --accent-cyan: #38bdf8;
+            --accent-amber: #f59e0b;
+            --accent-red: #f43f5e;
+            --accent-green: #10b981;
+            --text-main: #f1f5f9;
+            --text-muted: #94a3b8;
+            --font-mono: 'Courier New', Courier, monospace;
+            --font-sans: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: var(--bg-dark);
+            background-image: 
+                radial-gradient(circle at 50% 0%, rgba(56, 189, 248, 0.08), transparent 70%),
+                linear-gradient(rgba(255, 255, 255, 0.02) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
+            background-size: 100% 100%, 30px 30px, 30px 30px;
+            color: var(--text-main);
+            font-family: var(--font-sans);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .deck-container {
+            width: 100%;
+            max-width: 980px;
+            min-height: 620px;
+            background: var(--panel-bg);
+            backdrop-filter: blur(12px);
+            border: 1px solid var(--panel-border);
+            border-radius: 12px;
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.7), 0 0 25px rgba(56, 189, 248, 0.12);
+            display: flex;
+            flex-direction: column;
+            position: relative;
+            overflow: hidden;
+        }
+
+        /* Top HUD Header */
+        .hud-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 12px 24px;
+            background: rgba(0, 0, 0, 0.5);
+            border-bottom: 1px solid var(--panel-border);
+            font-family: var(--font-mono);
+            font-size: 0.75rem;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+        }
+
+        .classification {
+            color: var(--accent-amber);
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .classification::before {
+            content: '';
+            width: 8px;
+            height: 8px;
+            background: var(--accent-amber);
+            border-radius: 50%;
+            box-shadow: 0 0 8px var(--accent-amber);
+        }
+
+        .hud-title {
+            color: var(--text-muted);
+        }
+
+        /* Navigation Bar */
+        .nav-tabs {
+            display: flex;
+            background: rgba(0, 0, 0, 0.3);
+            border-bottom: 1px solid var(--panel-border);
+            overflow-x: auto;
+        }
+
+        .tab-btn {
+            flex: 1;
+            background: transparent;
+            border: none;
+            border-bottom: 2px solid transparent;
+            color: var(--text-muted);
+            padding: 12px 8px;
+            font-family: var(--font-mono);
+            font-size: 0.75rem;
+            font-weight: 700;
+            cursor: pointer;
+            text-transform: uppercase;
+            transition: all 0.2s ease;
+            white-space: nowrap;
+        }
+
+        .tab-btn:hover {
+            color: var(--accent-cyan);
+            background: rgba(56, 189, 248, 0.05);
+        }
+
+        .tab-btn.active {
+            color: var(--accent-cyan);
+            border-bottom-color: var(--accent-cyan);
+            background: rgba(56, 189, 248, 0.1);
+        }
+
+        /* Viewport & Slide Formatting */
+        .slide-viewport {
+            flex: 1;
+            position: relative;
+            padding: 28px 32px;
+            overflow-y: auto;
+        }
+
+        .slide {
+            display: none;
+            height: 100%;
+            flex-direction: column;
+            gap: 18px;
+            animation: fadeIn 0.3s ease-in-out forwards;
+        }
+
+        .slide.active {
+            display: flex;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(6px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .slide-tag {
+            font-family: var(--font-mono);
+            color: var(--accent-cyan);
+            font-size: 0.8rem;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+
+        h2 {
+            font-size: 1.8rem;
+            font-weight: 800;
+            color: #ffffff;
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
+        }
+
+        .grid-2 {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 16px;
+        }
+
+        .info-card {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid var(--panel-border);
+            border-radius: 8px;
+            padding: 16px;
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+        }
+
+        .info-card.alert {
+            border-color: rgba(244, 63, 94, 0.4);
+            background: rgba(244, 63, 94, 0.06);
+        }
+
+        .info-card.amber {
+            border-color: rgba(245, 158, 11, 0.4);
+            background: rgba(245, 158, 11, 0.06);
+        }
+
+        .card-label {
+            font-family: var(--font-mono);
+            font-size: 0.7rem;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .card-value {
+            font-size: 0.95rem;
+            font-weight: 600;
+            color: #ffffff;
+        }
+
+        .highlight-red { color: var(--accent-red); }
+        .highlight-amber { color: var(--accent-amber); }
+        .highlight-cyan { color: var(--accent-cyan); }
+
+        ul.tac-list {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        ul.tac-list li {
+            position: relative;
+            padding-left: 20px;
+            line-height: 1.5;
+            font-size: 0.95rem;
+        }
+
+        ul.tac-list li::before {
+            content: '>';
+            position: absolute;
+            left: 0;
+            color: var(--accent-cyan);
+            font-family: var(--font-mono);
+            font-weight: bold;
+        }
+
+        /* Footer Controls */
+        .controls-footer {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 12px 24px;
+            background: rgba(0, 0, 0, 0.5);
+            border-top: 1px solid var(--panel-border);
+            font-family: var(--font-mono);
+        }
+
+        .btn-nav {
+            background: rgba(56, 189, 248, 0.1);
+            border: 1px solid var(--panel-border);
+            color: var(--accent-cyan);
+            padding: 8px 18px;
+            border-radius: 4px;
+            font-family: var(--font-mono);
+            font-size: 0.8rem;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+
+        .btn-nav:hover {
+            background: var(--accent-cyan);
+            color: #000;
+            box-shadow: 0 0 12px rgba(56, 189, 248, 0.4);
+        }
+
+        .slide-counter {
+            font-size: 0.8rem;
+            color: var(--text-muted);
+            letter-spacing: 1px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="deck-container">
+        <!-- HUD HEADER -->
+        <div class="hud-header">
+            <div class="classification">CONFIDENTIAL // OPORD 02-26</div>
+            <div class="hud-title">OPERATION SABLE TRIDENT</div>
+        </div>
+
+        <!-- TABS -->
+        <div class="nav-tabs">
+            <button class="tab-btn active" onclick="goToSlide(0)">I. Overview & Mission</button>
+            <button class="tab-btn" onclick="goToSlide(1)">II. Situation</button>
+            <button class="tab-btn" onclick="goToSlide(2)">III. Execution (I & II)</button>
+            <button class="tab-btn" onclick="goToSlide(3)">IV. Execution (TIC)</button>
+            <button class="tab-btn" onclick="goToSlide(4)">V. Exfil & Support</button>
+        </div>
+
+        <!-- VIEWPORT -->
+        <div class="slide-viewport">
+            
+            <!-- SLIDE 1: OVERVIEW & MISSION -->
+            <div class="slide active">
+                <div>
+                    <div class="slide-tag">OPORD SECTION II // MISSION BRIEFING</div>
+                    <h2>Mission 2: "Broken Link"</h2>
+                </div>
+                <div class="grid-2">
+                    <div class="info-card">
+                        <div class="card-label">Mission Type</div>
+                        <div class="card-value">Direct Action (DA) / Snatch-and-Grab / Tactical Interdiction</div>
+                    </div>
+                    <div class="info-card">
+                        <div class="card-label">Time & Environment</div>
+                        <div class="card-value">1300Z | Mid-day heat, blinding sun, high dust visibility</div>
+                    </div>
+                    <div class="info-card">
+                        <div class="card-label">AO / Location</div>
+                        <div class="card-value">Old Daabad Fort & Ruins, High Eyl Plateau <span class="highlight-cyan">(OBJ VIPER)</span></div>
+                    </div>
+                    <div class="info-card alert">
+                        <div class="card-label">Primary High Value Target</div>
+                        <div class="card-value highlight-red">Abdi 'Terror' (Senior JAS Quartermaster)</div>
+                    </div>
+                </div>
+                <div class="info-card amber" style="margin-top: 4px;">
+                    <div class="card-label">Mission Statement</div>
+                    <div class="card-value" style="font-weight: normal; font-size: 0.95rem;">
+                        ODA 3324 conducts a Direct Action (DA) snatch-and-grab interdiction at 1300Z on Objective VIPER to capture JAS Quartermaster Abdi 'Terror', recover critical intelligence assets, and exfiltrate prior to town militia reinforcement.
+                    </div>
+                </div>
+            </div>
+
+            <!-- SLIDE 2: SITUATION -->
+            <div class="slide">
+                <div>
+                    <div class="slide-tag">OPORD SECTION I // SITUATION</div>
+                    <h2>Area of Operations & Intel</h2>
+                </div>
+                <div class="grid-2">
+                    <div class="info-card amber">
+                        <div class="card-label">Operational Background</div>
+                        <div class="card-value" style="font-weight: normal; font-size: 0.9rem;">
+                            Intelligence from tracking beacons recovered during Mission 1 confirms Volk Group's chief logistics broker is meeting senior JAS Quartermaster <strong class="highlight-red">Abdi 'Terror'</strong> inside the historic stone fort overlooking Eyl town.
+                        </div>
+                    </div>
+                    <div class="info-card alert">
+                        <div class="card-label">Enemy Forces</div>
+                        <ul class="tac-list" style="font-size: 0.85rem; margin-top: 4px;">
+                            <li><strong>Fort Defenders:</strong> Volk Group contractors with fixed PKM positions and suppressed rifles; JAS fighters holding outer courtyards.</li>
+                            <li><strong>QRF / Militia:</strong> JAS militia in Eyl town equipped with technicals (heavy MGs, RPGs).</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="info-card">
+                    <div class="card-label">Friendly Forces</div>
+                    <div class="card-value" style="font-weight: normal; font-size: 0.9rem;">
+                        <strong>ODA 3324</strong> ground elements operating with dedicated overhead CAS assets (<strong class="highlight-cyan">MH-60 DAP / MQ-9 Reaper</strong>).
+                    </div>
+                </div>
+            </div>
+
+            <!-- SLIDE 3: EXECUTION PHASES I & II -->
+            <div class="slide">
+                <div>
+                    <div class="slide-tag">OPORD SECTION III // EXECUTION (PHASES I & II)</div>
+                    <h2>Infiltration & Objective Actions</h2>
+                </div>
+                <div class="info-card" style="margin-bottom: 4px;">
+                    <div class="card-label">Concept of Operations</div>
+                    <div class="card-value" style="font-weight: normal; font-size: 0.9rem;">
+                        A four-phase tactical assault utilizing ground vehicle infiltration, multi-pronged compound clearing, CAS-supported defense, and foot-to-vehicle exfiltration.
+                    </div>
+                </div>
+                <div class="grid-2">
+                    <div class="info-card">
+                        <div class="card-label">Phase I: Infiltration</div>
+                        <ul class="tac-list" style="font-size: 0.85rem;">
+                            <li>Infiltrate along dry riverbed via <strong>2x GMVs</strong> (Ground Mobility Vehicles).</li>
+                            <li>Establish vehicle dismount at Staging Area <strong>600m below fort cliffs</strong>.</li>
+                            <li>Advance uphill on foot.</li>
+                        </ul>
+                    </div>
+                    <div class="info-card">
+                        <div class="card-label">Phase II: Actions on OBJ VIPER</div>
+                        <ul class="tac-list" style="font-size: 0.85rem;">
+                            <li><strong>Breach & Clear:</strong> Multi-pronged assault on stone fort. Suppress Volk PKM nests & clear courtyard fighters.</li>
+                            <li><strong>Target Capture & SSE:</strong> Secure Abdi 'Terror' alive. If compromised, extract encrypted sat phone & hard drives from cellar.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- SLIDE 4: EXECUTION PHASE III (TIC) -->
+            <div class="slide">
+                <div>
+                    <div class="slide-tag highlight-red">OPORD SECTION III // CONTINGENCY</div>
+                    <h2 class="highlight-red">Phase III: Troops in Contact (TIC)</h2>
+                </div>
+                <div class="info-card alert">
+                    <div class="card-label highlight-red">CRITICAL CONTINGENCY TRIGGER</div>
+                    <p style="margin-top: 6px;">
+                        The moment the breach goes loud, JAS militia in Eyl town mount technicals and rush up the narrow plateau switchbacks to cut off the team's escape.
+                    </p>
+                    <div style="margin-top: 14px; padding: 12px; background: rgba(0,0,0,0.3); border-radius: 6px; border-left: 3px solid var(--accent-amber);">
+                        <span class="highlight-amber" style="font-family: var(--font-mono); font-size: 0.75rem; font-weight: bold; text-transform: uppercase;">Tactical Hazard</span>
+                        <p style="margin-top: 4px; font-style: italic; font-size: 0.9rem;">
+                            The high ground becomes a double-edged sword—players risk being pinned on the cliff top while RPGs and heavy machine-gun fire rain from below.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- SLIDE 5: EXFIL, SUSTAINMENT & SIGNAL -->
+            <div class="slide">
+                <div>
+                    <div class="slide-tag">OPORD SECTIONS IV & V // SUPPORT & SIGNAL</div>
+                    <h2>Exfiltration, Sustainment & Command</h2>
+                </div>
+                <div class="grid-2">
+                    <div class="info-card">
+                        <div class="card-label">Phase IV: Exfiltration</div>
+                        <ul class="tac-list" style="font-size: 0.85rem;">
+                            <li>Target approaching technicals on switchbacks for CAS strikes via <strong class="highlight-cyan">MH-60 DAP</strong> or <strong class="highlight-cyan">MQ-9</strong>.</li>
+                            <li>Execute violent disengagement down the western rock wash.</li>
+                            <li>Fight back to staging GMVs for high-speed vehicle withdrawal.</li>
+                        </ul>
+                    </div>
+                    <div class="info-card">
+                        <div class="card-label">Section IV: Sustainment & Support</div>
+                        <ul class="tac-list" style="font-size: 0.85rem;">
+                            <li><strong>Transport:</strong> 2x Ground Mobility Vehicles (GMVs).</li>
+                            <li><strong>Fire Support:</strong> On-call CAS (MH-60 DAP / MQ-9 Reaper).</li>
+                        </ul>
+                        <div class="card-label" style="margin-top: 12px;">Section V: Command & Signal</div>
+                        <p style="font-size: 0.85rem; margin-top: 4px;">
+                            <strong>Primary Objective:</strong> Capture Target (Abdi 'Terror') or execute full Sensitive Site Exploitation (SSE).
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- FOOTER -->
+        <div class="controls-footer">
+            <button class="btn-nav" onclick="changeSlide(-1)">◄ PREV</button>
+            <div class="slide-counter" id="slideCounter">SLIDE 01 / 05</div>
+            <button class="btn-nav" onclick="changeSlide(1)">NEXT ►</button>
+        </div>
+    </div>
+
+    <script>
+        let currentSlide = 0;
+        const slides = document.querySelectorAll('.slide');
+        const tabs = document.querySelectorAll('.tab-btn');
+        const counter = document.getElementById('slideCounter');
+
+        function updateDeck() {
+            slides.forEach((s, i) => s.classList.toggle('active', i === currentSlide));
+            tabs.forEach((t, i) => t.classList.toggle('active', i === currentSlide));
+            counter.textContent = `SLIDE 0${currentSlide + 1} / 0${slides.length}`;
+        }
+
+        function goToSlide(index) {
+            currentSlide = index;
+            updateDeck();
+        }
+
+        function changeSlide(direction) {
+            currentSlide = (currentSlide + direction + slides.length) % slides.length;
+            updateDeck();
+        }
+
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'ArrowRight') changeSlide(1);
+            if (e.key === 'ArrowLeft') changeSlide(-1);
+        });
+    </script>
+</body>
+</html>
